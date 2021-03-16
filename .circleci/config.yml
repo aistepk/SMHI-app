@@ -5,3 +5,17 @@ workflows:
   node-tests:
     jobs:
       - node/test
+
+jobs:
+  build-and-deploy:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages
+      - run:
+          name: Build
+          command: npm run build
+      - run:
+          name: Deploy Netlify
+          command: npx netlify deploy --prod --dir=dist
+      
