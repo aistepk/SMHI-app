@@ -1,15 +1,14 @@
 <template>
-    <HelloWorld msg="SMHI APP COMING SOON" />
-    <img alt="Vue logo" src="./assets/bild.png" />
+    <Navbar />
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue"
+import Navbar from "./components/Navbar.vue"
 
 export default {
     name: "App",
     components: {
-        HelloWorld,
+        Navbar,
     },
 }
 </script>
