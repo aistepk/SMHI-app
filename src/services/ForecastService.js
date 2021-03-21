@@ -16,10 +16,6 @@ const forecast = new ForecastService()
 
 async function forecastData() {
     let weatherData = await forecast.getForecast()
-    if (weatherData != null) {
-        console.log(weatherData)
-    }
-
     return weatherData
 }
 
