@@ -11,9 +11,18 @@
         </a>
 
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li>
+                <a class="dropdown-item"><router-link v-bind:to="'/clouds'" class="txt">Moln</router-link></a>
+            </li>
+            <li>
+                <a class="dropdown-item"><router-link v-bind:to="'/wind'" class="txt">Vind</router-link></a>
+            </li>
+            <li>
+                <a class="dropdown-item"><router-link v-bind:to="'/rain'" class="txt">Regn</router-link></a>
+            </li>
+            <li>
+                <a class="dropdown-item"><router-link v-bind:to="'/about'" class="txt">Om oss</router-link></a>
+            </li>
         </ul>
     </div>
 </template>
@@ -25,5 +34,8 @@ export default {
 </script>
 
 <style scoped>
-
+.txt {
+    text-decoration: none;
+    color: black;
+}
 </style>

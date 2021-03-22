@@ -1,5 +1,5 @@
 <template>
-<img src="../assets/weather.jpg" style="max-width: 350px" class=" card mb-3" alt="Responsive image" />
+    <img src="../assets/weather.jpg" style="max-width: 350px" class=" card mb-3" alt="Responsive image" />
     <div class="card mb-3 rounded-sm" style="max-width: 350px" v-for="(obj, key) in cardJson" :key="key">
         <router-link :to="obj.path" class="txt">
             <div class="row g-0">
@@ -20,6 +20,7 @@
 
 <script>
 export default {
+    name: "Card",
     data() {
         return {
             cardJson: [
