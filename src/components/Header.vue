@@ -1,13 +1,9 @@
 <template>
     <div class="container bg-light">
-        <div class="row">
-            <div class="col-sm">
-                <navbar />
-            </div>
-            <div class="col-sm">
-                <h4>Meerkats</h4>
-            </div>
-            <div class="col-sm">
+        <div>
+            <div class="d-flex justify-content-between">
+                <Navbar />
+                <h3>Meercats</h3>
                 <div>{{ temp }} C</div>
             </div>
         </div>
