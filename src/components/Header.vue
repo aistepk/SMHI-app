@@ -1,15 +1,9 @@
 <template>
-    <div class="container bg-light">
-        <div class="row">
-            <div class="col-sm">
-                <navbar />
-            </div>
-            <div class="col-sm">
-                <h4>Meerkats</h4>
-            </div>
-            <div class="col-sm">
-                <div>{{ temp }} C</div>
-            </div>
+    <div class="container bg-light" style="height: 75px">
+        <div class="d-flex justify-content-between">
+            <Navbar />
+            <router-link v-bind:to="'/'" class="txt"><h3>Meercats</h3></router-link>
+            <h4>{{ temp }} C</h4>
         </div>
     </div>
 </template>
@@ -32,7 +26,11 @@ export default {
 </script>
 
 <style scoped>
-.row {
-    padding-top: 0.5em;
+.container {
+    padding-top: 0.75em;
+}
+.txt {
+    text-decoration: none;
+    color: black;
 }
 </style>

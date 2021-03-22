@@ -1,25 +1,28 @@
 <template>
-<img src="../assets/weather.jpg" style="max-width: 350px" class=" card mb-3" alt="Responsive image" />
-    <div class="card mb-3 rounded-sm" style="max-width: 350px" v-for="(obj, key) in cardJson" :key="key">
+    <div class="card mb-3 rounded" v-for="(obj, key) in cardJson" :key="key">
         <router-link :to="obj.path" class="txt">
             <div class="row g-0">
-                <div class="col-sm-8">
+                <div class="col-xs ">
                     <div class="card-body">
-                        <h5 class="card-title">{{ obj.caption }}</h5>
-                        <p class="card-text">
-                            {{ obj.title }}
-                        </p>
+                        <div class="d-flex justify-content-around">
+                            <div class="d-flex row">
+                                <h5 class="card-title">{{ obj.caption }}</h5>
+                                <p class="card-text">
+                                    {{ obj.title }}
+                                </p>
+                            </div>
+                            <img :src="obj.img" />
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <img :src="obj.img" />
-                </div></div
-        ></router-link>
+            </div>
+        </router-link>
     </div>
 </template>
 
 <script>
 export default {
+    name: "Card",
     data() {
         return {
             cardJson: [
@@ -57,5 +60,9 @@ export default {
 .txt {
     text-decoration: none;
     color: black;
+}
+
+.card-title {
+    border-radius: 20%;
 }
 </style>
