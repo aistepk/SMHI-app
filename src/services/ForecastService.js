@@ -16,7 +16,6 @@ const forecast = new ForecastService()
 
 async function findTemp(lng, lat) {
     let tempData = await forecast.getForecast(lng, lat)
-    console.log(tempData)
     for (const hourlyData of tempData.timeSeries) {
         const temp = getTemp(hourlyData.parameters)
         return temp
