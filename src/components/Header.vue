@@ -1,26 +1,35 @@
 <template>
-    <div class="container bg-light" style="height: 75px">
-        <div class="d-flex justify-content-between">
-            <Navbar />
-            <router-link v-bind:to="'/'" class="txt"><h3>Meercats</h3></router-link>
-            <h4>{{ temp }} C</h4>
+    <div class="container bg-light" style="height: 120px">
+        <div class="row">
+            <div class="d-flex justify-content-between">
+                <navbar />
+                <router-link :to="'/'" class="txt"><h3>Meercats</h3></router-link>
+                <h4>{{ temp }} C</h4>
+            </div>
+            <div class="row">
+                <drop-down-cities @refresh="getTemp" />
+            </div>
         </div>
     </div>
 </template>
 <script>
 import Navbar from "./Navbar.vue"
 import findTemp from "../services/ForecastService.js"
+import DropDownCities from "./DropDownCities.vue"
 
 export default {
+    components: { DropDownCities, Navbar },
     name: "Header",
-    components: { Navbar },
     data() {
         return {
             temp: {},
         }
     },
-    async created() {
-        this.temp = await findTemp(16.158, 58.5812)
+    methods: {
+        async getTemp(value) {
+            this.temp = await findTemp(value.lng, value.lat)
+            console.log(value)
+        },
     },
 }
 </script>

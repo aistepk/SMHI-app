@@ -12,16 +12,24 @@
 
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
             <li>
-                <a class="dropdown-item"><router-link v-bind:to="'/clouds'" class="txt">Moln</router-link></a>
+                <a class="dropdown-item"
+                    ><router-link v-bind:to="'/clouds'" class="txt"><div>Moln</div></router-link></a
+                >
             </li>
             <li>
-                <a class="dropdown-item"><router-link v-bind:to="'/wind'" class="txt">Vind</router-link></a>
+                <a class="dropdown-item"
+                    ><router-link v-bind:to="'/wind'" class="txt"><div>Vind</div></router-link></a
+                >
             </li>
             <li>
-                <a class="dropdown-item"><router-link v-bind:to="'/rain'" class="txt">Regn</router-link></a>
+                <a class="dropdown-item"
+                    ><router-link v-bind:to="'/rain'" class="txt"><div>Regn</div></router-link></a
+                >
             </li>
             <li>
-                <a class="dropdown-item"><router-link v-bind:to="'/about'" class="txt">Om oss</router-link></a>
+                <a class="dropdown-item"
+                    ><router-link v-bind:to="'/about'" class="txt"><div>Om oss</div></router-link></a
+                >
             </li>
         </ul>
     </div>
