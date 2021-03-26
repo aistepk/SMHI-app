@@ -5,7 +5,6 @@
         <div class="p-2">Du kan nå oss på surikat@väder.se</div>
     </div>
 
-
     <div class="row row-cols-2 justify-content-center">
         <div class="row">
             <div class="card mb-3 shadow-sm p-3 mb-5 zoom card" v-for="(obj, key) in people" :key="key">
