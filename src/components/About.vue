@@ -7,7 +7,7 @@
 
     <div class="row row-cols-2 justify-content-center">
         <div class="row">
-            <div class="card mb-3 shadow-sm p-3 mb-5 zoom card" v-for="(obj, key) in people" :key="key">
+            <div class="card mb-3 shadow-sm p-3 mb-5 zoom card bg-transparent" v-for="(obj, key) in people" :key="key">
                 <div class="row g-0">
                     <div class="col-sm-8">
                         <div class="card-body">

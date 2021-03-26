@@ -3,9 +3,13 @@
         <img src="../assets/startsida.jpg" class="start-image" />
     </div>
 
-    <div class="containerY">
+    <div class="container">
         <div class="row row-cols-2">
-            <div class="card shadow-sm p-3 mb-5 zoom card-image" v-for="(obj, key) in cardJson" :key="key">
+            <div
+                class="card shadow-sm p-3 mb-5 zoom card-image bg-transparent"
+                v-for="(obj, key) in cardJson"
+                :key="key"
+            >
                 <router-link :to="obj.path" class="txt">
                     <div class="col">
                         <div class="col">

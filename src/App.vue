@@ -13,3 +13,9 @@ export default {
     components: { Header, DropDownCities },
 }
 </script>
+
+<style>
+html body {
+    background-color: #fafafa;
+}
+</style>
