@@ -1,31 +1,35 @@
 <template>
-    <div class="container bg-light" style="height: 75px">
-        <div class="d-flex justify-content-center">
-            <div class="row">
-                <div class="col mt-3">
-                    <div class="dropdown">
-                        <button
-                            class="btn btn-secondary dropdown-toggle"
-                            type="button"
-                            id="dropdownMenuButton"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                        >
-                            Stad
-                        </button>
-                        <div class="dropdown-menu pre-scrollable" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Dingles</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="d-flex justify-content-center">
+        <div class="dropdown">
+            <a
+                class="btn btn-secondary dropdown-toggle"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+            >
+                test
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li>
+                    <a
+                        class="dropdown-item"
+                        href="#"
+                        v-for="(obj, city) in cities"
+                        :key="city"
+                        @click="$emit('refresh', obj)"
+                    >
+                        {{ obj.name }}
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </template>
 <script>
 export default {
-    name: "DropDown",
+    name: "DropDownCities",
     data() {
         return {
             cities: [
@@ -41,6 +45,5 @@ export default {
             ],
         }
     },
-    methods() {},
 }
 </script>
