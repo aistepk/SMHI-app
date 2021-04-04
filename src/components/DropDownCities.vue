@@ -1,0 +1,49 @@
+<template>
+    <div class="d-flex justify-content-center">
+        <div class="dropdown">
+            <a
+                class="btn btn-secondary dropdown-toggle"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+            >
+                test
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li>
+                    <a
+                        class="dropdown-item"
+                        href="#"
+                        v-for="(obj, city) in cities"
+                        :key="city"
+                        @click="$emit('refresh', obj)"
+                    >
+                        {{ obj.name }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</template>
+<script>
+export default {
+    name: "DropDownCities",
+    data() {
+        return {
+            cities: [
+                { name: "Göteborg", lng: 16.158, lat: 58.5812 },
+                { name: "Helsingborg", lng: 12.68, lat: 56.04 },
+                { name: "Jönköping", lng: 14.17, lat: 57.78 },
+                { name: "Linköping", lng: 15.67, lat: 58.38 },
+                { name: "Malmö", lng: 13.00073, lat: 55.60587 },
+                { name: "Stockholm", lng: 18.0649, lat: 59.33258 },
+                { name: "Uppsala", lng: 17.7, lat: 59.87 },
+                { name: "Västerås", lng: 16.55, lat: 59.6 },
+                { name: "Örebro", lng: 15.18, lat: 59.28 },
+            ],
+        }
+    },
+}
+</script>

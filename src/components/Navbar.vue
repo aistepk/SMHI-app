@@ -1,34 +1,38 @@
 <template>
-    <nav class="navbar navbar-light bg-light" aria-label="navigation">
-        <div class="container-fluid">
-            <button
-                class="navbar-toggler collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarMain"
-                aria-controls="navbarMain"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="d-flex justify-content-start">
-                <div class="navbar-collapse collapse" id="navbarMain">
-                    <div class="navbar-nav me-auto mb-2">
-                        <h6>Vädret just nu</h6>
-                        <div class="btn-group-vertical button-light" role="group" aria-label="Weather links">
-                            <span class="border-0">
-                                <button type="button" class="btn btn-light">Moln</button>
-                                <button type="button" class="btn btn-light">Vind</button>
-                                <button type="button" class="btn btn-light">Regn</button>
-                                <button type="button" class="btn btn-light">Om oss</button>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <div class="dropdown">
+        <a
+            class="btn btn-secondary dropdown-toggle"
+            href="#"
+            role="button"
+            id="dropdownMenuLink"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+        >
+        </a>
+
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li>
+                <a class="dropdown-item"
+                    ><router-link v-bind:to="'/clouds'" class="txt"><div>Moln</div></router-link></a
+                >
+            </li>
+            <li>
+                <a class="dropdown-item"
+                    ><router-link v-bind:to="'/wind'" class="txt"><div>Vind</div></router-link></a
+                >
+            </li>
+            <li>
+                <a class="dropdown-item"
+                    ><router-link v-bind:to="'/rain'" class="txt"><div>Regn</div></router-link></a
+                >
+            </li>
+            <li>
+                <a class="dropdown-item"
+                    ><router-link v-bind:to="'/about'" class="txt"><div>Om oss</div></router-link></a
+                >
+            </li>
+        </ul>
+    </div>
 </template>
 
 <script>
@@ -38,18 +42,8 @@ export default {
 </script>
 
 <style scoped>
-.btn-group-vertical button {
-    text-align: left;
-    border: none;
-    padding: 1em;
-    font-size: large;
-}
-
-.btn-group-vertical:hover {
-    color: white;
-}
-
-.navbar-nav h6 {
-    padding-top: 1em;
+.txt {
+    text-decoration: none;
+    color: black;
 }
 </style>

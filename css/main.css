@@ -1,0 +1,5 @@
+@use '~bootstrap/scss/bootstrap' with (
+  $card-border-color: black,
+  $card-bg: rgb(40, 40, 40),
+  $card-border-radius: 2em 
+)

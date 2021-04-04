@@ -1,48 +1,63 @@
 <template>
-<img src="../assets/weather.jpg" style="max-width: 350px" class=" card mb-3" alt="Responsive image" />
-    <div class="card mb-3 rounded-sm" style="max-width: 350px" v-for="(obj, key) in cardJson" :key="key">
-        <router-link :to="obj.path" class="txt">
-            <div class="row g-0">
-                <div class="col-sm-8">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ obj.caption }}</h5>
-                        <p class="card-text">
-                            {{ obj.title }}
-                        </p>
+    <div>
+        <img src="../assets/startsida.jpg" class="start-image" />
+    </div>
+
+    <div class="container">
+        <div class="row row-cols-2">
+            <div
+                class="card shadow-sm p-3 mb-5 zoom card-image bg-transparent"
+                v-for="(obj, key) in cardJson"
+                :key="key"
+            >
+                <router-link :to="obj.path" class="txt">
+                    <div class="col">
+                        <div class="col">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-around">
+                                    <div class="d-flex row">
+                                        <h5 class="card-title">{{ obj.caption }}</h5>
+                                        <p class="card-text">
+                                            {{ obj.title }}
+                                        </p>
+                                    </div>
+                                    <img :src="obj.img" class="image-img-top" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-4">
-                    <img :src="obj.img" />
-                </div></div
-        ></router-link>
+                </router-link>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
+    name: "Card",
     data() {
         return {
             cardJson: [
                 {
-                    img: require("../assets/rain.png"),
+                    img: require("../assets/kort-regn.jpg"),
                     caption: "Regn",
                     title: "Some text about rain",
                     path: "/rain",
                 },
                 {
-                    img: require("../assets/cloud.png"),
+                    img: require("../assets/kort-moln.jpg"),
                     caption: "Moln",
                     title: "Some text about clouds",
                     path: "/clouds",
                 },
                 {
-                    img: require("../assets/wind.png"),
+                    img: require("../assets/kort-vind.jpg"),
                     caption: "Vind",
                     title: "Some text about wind",
                     path: "/wind",
                 },
                 {
-                    img: require("../assets/meer.png"),
+                    img: require("../assets/kort-omoss.jpg"),
                     caption: "Om oss",
                     title: "About us",
                     path: "/about",
@@ -57,5 +72,29 @@ export default {
 .txt {
     text-decoration: none;
     color: black;
+}
+
+.zoom {
+    transition: transform 0.3s; /* Animation */
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    transform: scale(1.05);
+}
+.card-image {
+    width: 20rem; /* Using this as an example, you can keep 20rem */
+    overflow: hidden; /* Optional */
+    padding: 40px;
+}
+.image-img-top {
+    width: 60%;
+}
+.start-image {
+    height: 300px;
+    width: 100%;
+    padding: 15px;
 }
 </style>

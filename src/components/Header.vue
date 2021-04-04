@@ -1,14 +1,13 @@
 <template>
-    <div class="container bg-light">
+    <div class="container bg-light" style="height: 120px">
         <div class="row">
-            <div class="col-sm">
+            <div class="d-flex justify-content-between">
                 <navbar />
+                <router-link :to="'/'" class="txt"><h3>Meercats</h3></router-link>
+                <h4>{{ temp }} C</h4>
             </div>
-            <div class="col-sm">
-                <h4>Meerkats</h4>
-            </div>
-            <div class="col-sm">
-                <div>{{ temp }} C</div>
+            <div class="row">
+                <drop-down-cities @refresh="getTemp" />
             </div>
         </div>
     </div>
@@ -16,23 +15,31 @@
 <script>
 import Navbar from "./Navbar.vue"
 import findTemp from "../services/ForecastService.js"
+import DropDownCities from "./DropDownCities.vue"
 
 export default {
+    components: { DropDownCities, Navbar },
     name: "Header",
-    components: { Navbar },
     data() {
         return {
             temp: {},
         }
     },
-    async created() {
-        this.temp = await findTemp(16.158, 58.5812)
+    methods: {
+        async getTemp(value) {
+            this.temp = await findTemp(value.lng, value.lat)
+            console.log(value)
+        },
     },
 }
 </script>
 
 <style scoped>
-.row {
-    padding-top: 0.5em;
+.container {
+    padding-top: 0.75em;
+}
+.txt {
+    text-decoration: none;
+    color: black;
 }
 </style>
