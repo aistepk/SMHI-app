@@ -1,3 +1,6 @@
 <template>
-    <p>INFO ABOUT CLOUDS</p>
+    <h1>Molnighet just nu</h1>
 </template>
+
+<script>
+</script>

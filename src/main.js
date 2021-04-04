@@ -1,8 +1,11 @@
 import { createApp } from "vue"
 import App from "./App.vue"
 import "bootstrap"
-import "./assets/style/custom.scss"
 import router from "./router"
+import "vue-gifplayer/src/gif.css"
+import "animated_gif"
+
+
 
 createApp(App)
     .use(router)
