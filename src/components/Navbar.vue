@@ -13,9 +13,9 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <a class="navbar-brand" href="#">Vädret just nu</a>
+                <a class="navbar-brand mt-3">Vädret just nu</a>
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
+                    <li class="nav-item mt-1">
                         <router-link class="nav-link active" to="/clouds">Moln</router-link>
                     </li>
                     <li class="nav-item">
