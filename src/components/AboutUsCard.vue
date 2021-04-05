@@ -1,24 +1,30 @@
 <template>
-    <div class="d-flex align-items-center flex-column" style="height: 130px">
-        <div class="mb-auto p-2"><strong>Om oss</strong></div>
-        <div class="p-2">Vi är ett gäng surikater som gillar Java, UX och väder</div>
-        <div class="p-2">Du kan nå oss på surikat@väder.se</div>
-    </div>
+    <div>
+        <div class="d-flex align-items-center flex-column" style="height: 130px">
+            <div class="mb-auto p-2"><strong>Om oss</strong></div>
+            <div class="p-2">Vi är ett gäng surikater som gillar Java, UX och väder</div>
+            <div class="p-2">Du kan nå oss på surikat@väder.se</div>
+        </div>
 
-    <div class="row row-cols-2 justify-content-center">
-        <div class="row">
-            <div class="card mb-3 shadow-sm p-3 mb-5 zoom card bg-transparent" v-for="(obj, key) in people" :key="key">
-                <div class="row g-0">
-                    <div class="col-sm-8">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ obj.name }}</h5>
-                            <p class="card-text">
-                                {{ obj.role }}
-                            </p>
+        <div class="row row-cols-2 justify-content-center">
+            <div class="row">
+                <div
+                    class="card mb-3 shadow-sm p-3 mb-5 zoom card bg-transparent"
+                    v-for="(obj, key) in people"
+                    :key="key"
+                >
+                    <div class="row g-0">
+                        <div class="col-sm-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ obj.name }}</h5>
+                                <p class="card-text">
+                                    {{ obj.role }}
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <img :src="obj.img" class="card-img-top" />
+                        <div class="col-sm-4">
+                            <img :src="obj.img" class="card-img-top" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -28,6 +34,7 @@
 
 <script>
 export default {
+    name: "AboutUsCard",
     data() {
         return {
             people: [

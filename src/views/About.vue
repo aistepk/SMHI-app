@@ -1,14 +1,14 @@
 <template>
-    <About />
+    <about-us-card />
 </template>
 
 <script>
-import About from "../components/About"
+import AboutUsCard from "../components/AboutUsCard.vue"
 
 export default {
     name: "About",
     components: {
-        About,
+        AboutUsCard,
     },
 }
 </script>
