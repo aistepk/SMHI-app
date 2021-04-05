@@ -1,30 +1,11 @@
 <template>
-    <div class="d-flex justify-content-center">
-        <div class="dropdown">
-            <a
-                class="btn btn-secondary dropdown-toggle"
-                href="#"
-                role="button"
-                id="dropdownMenuLink"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-            >
-                test
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li>
-                    <a
-                        class="dropdown-item"
-                        href="#"
-                        v-for="(obj, city) in cities"
-                        :key="city"
-                        @click="$emit('refresh', obj)"
-                    >
-                        {{ obj.name }}
-                    </a>
-                </li>
-            </ul>
-        </div>
+    <div>
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option selected>Göteborg</option>
+            <option value="city" v-for="(obj, city) in cities" :key="city" @click="$emit('refresh', obj)">{{
+                obj.name
+            }}</option>
+        </select>
     </div>
 </template>
 <script>
