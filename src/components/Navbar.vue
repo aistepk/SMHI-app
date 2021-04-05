@@ -1,38 +1,36 @@
 <template>
-    <div class="dropdown">
-        <a
-            class="btn btn-secondary dropdown-toggle"
-            href="#"
-            role="button"
-            id="dropdownMenuLink"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-        >
-        </a>
-
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <li>
-                <a class="dropdown-item"
-                    ><router-link v-bind:to="'/clouds'" class="txt"><div>Moln</div></router-link></a
-                >
-            </li>
-            <li>
-                <a class="dropdown-item"
-                    ><router-link v-bind:to="'/wind'" class="txt"><div>Vind</div></router-link></a
-                >
-            </li>
-            <li>
-                <a class="dropdown-item"
-                    ><router-link v-bind:to="'/rain'" class="txt"><div>Regn</div></router-link></a
-                >
-            </li>
-            <li>
-                <a class="dropdown-item"
-                    ><router-link v-bind:to="'/about'" class="txt"><div>Om oss</div></router-link></a
-                >
-            </li>
-        </ul>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="#">Vädret just nu</a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <router-link class="nav-link active" to="/clouds">Moln</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link class="nav-link active" to="/rain">Regn</router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link class="nav-link active" to="/wind">Vind</router-link>
+                    </li>
+                    <li class="nav-item mt-5">
+                        <router-link class="nav-link active" to="/about">Om oss</router-link>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </template>
 
 <script>

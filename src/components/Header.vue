@@ -6,19 +6,15 @@
                 <router-link :to="'/'" class="txt"><h3>Meercats</h3></router-link>
                 <h4>{{ temp }} C</h4>
             </div>
-            <div class="row">
-                <drop-down-cities @refresh="getTemp" />
-            </div>
         </div>
     </div>
 </template>
 <script>
 import Navbar from "./Navbar.vue"
 import findTemp from "../services/ForecastService.js"
-import DropDownCities from "./DropDownCities.vue"
 
 export default {
-    components: { DropDownCities, Navbar },
+    components: { Navbar },
     name: "Header",
     data() {
         return {
