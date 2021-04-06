@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <h4>Molnighet just nu</h4>
-        <h8 class="col-1 ">Välj Stad</h8>
+        <h7 class="col-1 ">Välj Stad</h7>
         <div class="row justify-content-left">
             <drop-down-cities class="col-10" />
         </div>
@@ -18,8 +18,19 @@
 <script>
 import CloudCharts from "../components/CloudCharts.vue"
 import DropDownCities from "../components/DropDownCities.vue"
+
 export default {
     components: { CloudCharts, DropDownCities },
+    data() {
+        return {
+            cloud: {},
+        }
+    },
+    methods: {
+        getClouds(value) {
+            console.log(value)
+        },
+    },
 }
 </script>
 <style scoped>

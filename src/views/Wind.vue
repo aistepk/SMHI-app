@@ -5,6 +5,8 @@
 
     <div class="d-flex flex-column mb-3">
         <div>
+            <h4>Vindstyrkan just nu</h4>
+            <drop-down-cities @update="getWind" />
             <p>{{ wind }}m/s</p>
             <p>{{ temperate }}</p>
         </div>
@@ -67,12 +69,14 @@
 
 <script>
 import findWindSpeed from "../services/WindService.js"
+import DropDownCities from "../components/DropDownCities"
 export default {
     name: "Wind",
+    components: { DropDownCities },
     data() {
         return {
             wind: {},
-            temperate: {},
+            // temperate: {},
         }
     },
     async created() {
@@ -81,13 +85,17 @@ export default {
     methods: {
         getTemperate() {
             if (this.wind >= 4 && this.wind <= 7.9) {
-                this.temperate = this.wind
+                // this.temperate = this.wind
             }
+        },
+        async getWind(value) {
+            console.log(value)
+            this.wind = await findWindSpeed(value.lng, value.lat)
         },
     },
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 img {
     width: 100%;
     padding: 15px;

@@ -1,5 +1,7 @@
 <template>
-    <Card />
+    <div class="container-fluid">
+        <Card />
+    </div>
 </template>
 
 <script>

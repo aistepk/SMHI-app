@@ -1,18 +1,27 @@
 <template>
     <div>
-        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-            <option selected>Göteborg</option>
-            <option value="city" v-for="(obj, city) in cities" :key="city" @click="$emit('refresh', obj)">{{
-                obj.name
-            }}</option>
+        <select
+            class="form-select form-select-sm"
+            aria-label=".form-select-sm example"
+            v-model="selectedOption"
+            v-on:change="optionChange"
+        >
+            <option :value="obj" selected v-for="(obj, city) in cities" :key="city">
+                {{ obj.name }}
+            </option>
         </select>
     </div>
 </template>
 <script>
 export default {
     name: "DropDownCities",
-    data() {
+    data: function() {
         return {
+            selectedOption: {
+                name: "Göteborg",
+                lng: 16.158,
+                lat: 58.5812,
+            },
             cities: [
                 { name: "Göteborg", lng: 16.158, lat: 58.5812 },
                 { name: "Helsingborg", lng: 12.68, lat: 56.04 },
@@ -25,6 +34,11 @@ export default {
                 { name: "Örebro", lng: 15.18, lat: 59.28 },
             ],
         }
+    },
+    methods: {
+        optionChange: function() {
+            this.$emit("update", this.selectedOption)
+        },
     },
 }
 </script>

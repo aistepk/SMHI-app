@@ -17,13 +17,13 @@ const forecast = new ForecastService()
 async function findTemp(lng, lat) {
     let tempData = await forecast.getForecast(lng, lat)
     for (const hourlyData of tempData.timeSeries) {
-        const temp = getTemp(hourlyData.parameters, "t")
+        const temp = getTemp(hourlyData.parameters)
         return temp
     }
 }
-function getTemp(parameters, p) {
+function getTemp(parameters) {
     for (const param of parameters) {
-        if (param.name === p) {
+        if (param.name === "t") {
             return param.values[0]
         }
     }
