@@ -2,32 +2,21 @@
     <div>
         <img src="../assets/startsida.jpg" class="start-image" />
     </div>
-
-    <div class="container">
-        <div class="row row-cols-2">
-            <div
-                class="card shadow-sm p-3 mb-5 zoom card-image bg-transparent"
-                v-for="(obj, key) in cardJson"
-                :key="key"
-            >
-                <router-link :to="obj.path" class="txt">
-                    <div class="col">
-                        <div class="col">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-around">
-                                    <div class="d-flex row">
-                                        <h5 class="card-title">{{ obj.caption }}</h5>
-                                        <p class="card-text">
-                                            {{ obj.title }}
-                                        </p>
-                                    </div>
-                                    <img :src="obj.img" class="image-img-top" />
-                                </div>
-                            </div>
+    <div class="row">
+        <div class="card shadow-sm p-3 mb-5 zoom card-image bg-transparent" v-for="(obj, key) in cardJson" :key="key">
+            <router-link :to="obj.path" class="txt">
+                <div class="card-body">
+                    <div class="d-flex justify-content-around">
+                        <div class="d-flex row">
+                            <h5 class="card-title">{{ obj.caption }}</h5>
+                            <p class="card-text">
+                                {{ obj.title }}
+                            </p>
                         </div>
+                        <img :src="obj.img" class="image-img-top" />
                     </div>
-                </router-link>
-            </div>
+                </div>
+            </router-link>
         </div>
     </div>
 </template>
@@ -85,8 +74,8 @@ export default {
     transform: scale(1.05);
 }
 .card-image {
-    width: 20rem; /* Using this as an example, you can keep 20rem */
-    overflow: hidden; /* Optional */
+    width: 20rem;
+    overflow: hidden;
     padding: 40px;
 }
 .image-img-top {
