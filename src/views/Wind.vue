@@ -2,7 +2,6 @@
     <!-- <div id="header">
         <h5>{{ wind }}m/s</h5>
     </div> -->
-
     <div class="d-flex flex-column mb-3">
         <div>
             <h4>Vindstyrkan just nu</h4>
@@ -66,7 +65,6 @@
         </div>
     </div>
 </template>
-
 <script>
 import findWindSpeed from "../services/WindService.js"
 import DropDownCities from "../components/DropDownCities"

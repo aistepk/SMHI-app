@@ -11,8 +11,7 @@ async function findRain(lng, lat) {
     let rainData = await getAPI(lng, lat)
     for (const hourlyData of rainData.timeSeries) {
         const rain = getParameters(hourlyData.parameters)
-        this.values.push(rain)
-        this.times.push(hourlyData.validTime)
+        return rain
     }
 }
 
