@@ -1,45 +1,46 @@
 <template>
     <!-- <div id="header">
-        <h5>{{ wind }}m/s</h5>
+        <h5>{{ wind }}m/s</h5> class="d-flex flex-column mb-3" img-responsive center-block d-block mx-auto
     </div> -->
 
-    <div class="d-flex flex-column mb-3">
-        <div>
-            <p>{{ wind }}m/s</p>
-            <p>{{ temperate }}</p>
+    <div class="container">
+        <div v-if="wind >= 0 && wind <= 3.9" class="row">
+            <h5>{{ wind }}m/s</h5>
+            <h5>Svag vind</h5>
+            <img src="../assets/breeze.gif" />
         </div>
-        <div>
-            <div v-if="wind >= 0 && wind <= 3.9">
-                <p>Svag vind</p>
-                <img src="../assets/breeze.gif" />
-            </div>
-            <div v-if="wind >= 4 && wind <= 7.9">
-                <p>Måttlig vind</p>
-                <img src="../assets/lightWind.gif" />
-            </div>
-            <div v-if="wind >= 8 && wind <= 13.8">
-                <p>Frisk vind</p>
-                <img src="../assets/windy.gif" />
-            </div>
-            <div v-if="wind >= 13.9 && wind <= 24.4">
-                <p>Hård vind</p>
-                <img src="../assets/windy.gif" />
-            </div>
-            <div v-if="wind >= 24.5 && wind <= 32.6">
-                <p>Storm</p>
-                <img src="../assets/storm.gif" />
-            </div>
-            <div v-if="wind >= 32.7">
-                <p>Orkan</p>
-                <img src="../assets/storm.gif" />
-            </div>
+        <div v-if="wind >= 4 && wind <= 7.9" class="row">
+            <h5>{{ wind }}m/s</h5>
+            <h5>Måttlig vind</h5>
+            <br /><br />
+            <img src="../assets/lightWind.gif" class="img-fluid" alt="Gif of light wind" />
         </div>
-        <div class="table-responsive mt-4">
+        <div v-if="wind >= 8 && wind <= 13.8" class="row">
+            <h5>{{ wind }}m/s</h5>
+            <h5>Frisk vind</h5>
+            <img src="../assets/windy.gif" />
+        </div>
+        <div v-if="wind >= 13.9 && wind <= 24.4" class="row">
+            <h5>{{ wind }}m/s</h5>
+            <h5>Hård vind</h5>
+            <img src="../assets/windy.gif" />
+        </div>
+        <div v-if="wind >= 24.5 && wind <= 32.6" class="row">
+            <h5>{{ wind }}m/s</h5>
+            <h5>Storm</h5>
+            <img src="../assets/storm.gif" />
+        </div>
+        <div v-if="wind >= 32.7" class="row">
+            <h5>{{ wind }}m/s</h5>
+            <h5>Orkan</h5>
+            <img src="../assets/storm.gif" />
+        </div>
+        <div class=" row mt-4">
             <h6>Vindstyrka</h6>
             <p>Här finns information om vad vindstyrka innebär</p>
-            <table class="table table-bordered border border-3">
+            <table class="table table-bordered border border-3" style="margin: auto">
                 <thead>
-                    <tr class="border border-4">
+                    <tr class="table border border-4">
                         <th scope="col" class="table-active">m/s</th>
                         <th scope="col" class="border border-4">0-3,9</th>
                         <th scope="col" class="border border-4">4-7,9</th>
@@ -88,13 +89,13 @@ export default {
 }
 </script>
 <style lang="scss">
-img {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid black;
-    border-radius: 8px;
-}
-p {
+// img {
+//     width: 100%;
+//     padding: 15px;
+//     border: 1px solid black;
+//     border-radius: 8px;
+// }
+h5 {
     text-align: center;
 }
 </style>
