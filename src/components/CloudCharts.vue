@@ -13,6 +13,7 @@ export default {
                 width: "100%",
                 type: "pie",
             },
+            colors: ["#C0E8F9", "#ADB8BC"],
             labels: ["Moln:"],
             theme: {
                 monochrome: {

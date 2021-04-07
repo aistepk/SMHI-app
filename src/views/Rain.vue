@@ -2,8 +2,8 @@
     <h3>Nederbörd just nu</h3>
     <h4>Välj Stad</h4>
     <drop-down-cities @update="getWind" />
-    <div class="mt-4">
-        <apexchart width="100%" type="line" :options="options" :series="series"></apexchart>
+    <div class="mt-4" id="chart">
+        <apexchart height="350" width="600" type="line" :options="options" :series="series"></apexchart>
     </div>
 </template>
 
@@ -55,3 +55,16 @@ export default {
     },
 }
 </script>
+
+<style scoped> 
+h3 {
+    text-align: center;
+}
+
+#chart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+</style>

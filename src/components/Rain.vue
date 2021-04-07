@@ -1,6 +1,6 @@
 <template>
     <div class="d-flex justify-content-center">
-        <apexchart width="500" type="bar" :options="chartOptions" :series="series"></apexchart>
+        <apexchart height="350" width="600" type="bar" :options="chartOptions" :series="series"></apexchart>
     </div>
 </template>
 
