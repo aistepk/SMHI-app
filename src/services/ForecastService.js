@@ -4,10 +4,10 @@ class ForecastService {
         const url = `${BASE_URL}/api/category/pmp3g/version/2/geotype/point/lon/${lng}/lat/${lat}/data.json`
         try {
             const response = await fetch(url)
-            const temp = await response.json()
-            return temp
+            const data = await response.json()
+            return data
         } catch (Error) {
-            return "OOps! Something went wrong when fetching the API"
+            return "Oops! Something went wrong when fetching the API"
         }
     }
 }
