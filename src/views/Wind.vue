@@ -37,7 +37,10 @@
         </div>
         <div class="table-responsive mt-4">
             <h6>Vindstyrka</h6>
-            <p>Här finns information om vad vindstyrka innebär</p>
+            <p>
+                Vindhastighet eller vidstyrka är ett mått på hastigheten av stora och svaga vindar. Vindhastighet anges
+                i antingen i meter per sekund eller Beaufortgrader
+            </p>
             <table class="table table-bordered border border-3">
                 <thead>
                     <tr class="border border-4">
