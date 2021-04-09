@@ -3,8 +3,7 @@
     <h4>Välj Stad</h4>
     <drop-down-cities @update="getWind" />
     <div class="mt-4" id="chart">
-                <apexchart style="margin-top: 30px" class="apex" type="line" :options="options" :series="series"></apexchart>
-
+        <apexchart style="margin-top: 30px" class="apex" type="line" :options="options" :series="series"></apexchart>
     </div>
 </template>
 
@@ -20,7 +19,7 @@ let currentPlusFour = today.getHours() + 4
 let currentPlusFive = today.getHours() + 5
 let currentPlusSix = today.getHours() + 6
 let currentPlusSeven = today.getHours() + 7
-const values = []
+let values = []
 export default {
     name: "Rain",
     components: { DropDownCities },
@@ -57,8 +56,16 @@ export default {
     },
 
     async created() {
-        this.rain = await findRain(11.89, 57.69)
-        console.log(this.rain)
+        let rainData = await findRain(11.89, 57.69)
+        console.log(rainData)
+        values.push(rainData[0])
+        values.push(rainData[1])
+        values.push(rainData[2])
+        values.push(rainData[3])
+        values.push(rainData[4])
+        values.push(rainData[5])
+        values.push(rainData[6])
+        values.push(rainData[7])
     },
     methods: {},
 }

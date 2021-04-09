@@ -1,0 +1,520 @@
+[33mcommit 5e36bec58af218d543d03cf7541f16aacc462d74[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Merge: 7f1ea4e 3d99182
+Author: ShaSkol <shaism0914@skola.goteborg.se>
+Date:   Fri Apr 9 17:26:58 2021 +0200
+
+    updating charts for clouds and rain
+
+[33mcommit 3d99182cf4b599c15cb52d17e31e546322c5a12e[m
+Author: ShaSkol <shaism0914@skola.goteborg.se>
+Date:   Fri Apr 9 17:19:08 2021 +0200
+
+    updating charts for clouds and rain
+
+[33mcommit 7f1ea4e191452dd714c837d3886ec025fb9030a8[m
+Merge: 8c5b911 3303f25
+Author: trojandersen <trojandersen@gmail.com>
+Date:   Wed Apr 7 12:53:16 2021 +0200
+
+    Merge branch 'testbranch'
+
+[33mcommit 3303f25d9c8ff99eeab8dff02868b1532e6e959c[m
+Author: trojandersen <trojandersen@gmail.com>
+Date:   Wed Apr 7 12:51:25 2021 +0200
+
+    added icons & weather symbols
+
+[33mcommit 8c5b91116587734ce15949196204f7ade3d662ca[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Wed Apr 7 12:48:12 2021 +0200
+
+    update cities
+
+[33mcommit 2980a351f8e24934bb97e7b03e17683ddd728239[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Wed Apr 7 11:51:27 2021 +0200
+
+    change some colours and sizes
+
+[33mcommit 2b91eaa998a61fc66d944c2cda0057081b203269[m
+Merge: bd784f3 fccb46b
+Author: ShaSkol <shaism0914@skola.goteborg.se>
+Date:   Wed Apr 7 11:27:24 2021 +0200
+
+    updating
+
+[33mcommit fccb46bd416718343b1ba48c0198c52fa17613f5[m
+Author: ShaSkol <shaism0914@skola.goteborg.se>
+Date:   Wed Apr 7 11:02:41 2021 +0200
+
+    updating rainInterface
+
+[33mcommit bd784f334fd633624d3240f9319fdf030c075464[m
+Merge: 4504ccf 179deae
+Author: Aiste P <72742124+aistepk@users.noreply.github.com>
+Date:   Tue Apr 6 18:38:58 2021 +0200
+
+    Merge pull request #18 from aistepk/regn
+    
+    Regn
+
+[33mcommit 179deaee357b984774f78a4c81e4966cc06ac429[m
+Merge: a80c136 4504ccf
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Tue Apr 6 18:36:52 2021 +0200
+
+    Merge branch 'master' into regn
+
+[33mcommit a80c1369af21f3138796e2b53c9eb22d8dd863ae[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Tue Apr 6 18:30:42 2021 +0200
+
+    add Rain chart
+
+[33mcommit 7c388ce31abce35f1d8e12d24945c0873e130fdc[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Tue Apr 6 18:29:16 2021 +0200
+
+    add RainService (not completely finished)
+
+[33mcommit 4504ccf0a83b9c63d75b91bbcdc59ceb9ec736b3[m
+Merge: 374f14e b241646
+Author: Marius <72731967+Marre89@users.noreply.github.com>
+Date:   Tue Apr 6 12:43:01 2021 +0200
+
+    Merge pull request #17 from aistepk/layout
+    
+    Layout
+
+[33mcommit b241646caf591d06c8434d985f47d226ca74e1eb[m
+Merge: aae9e3f 374f14e
+Author: Marre89 <git config --global user.email>
+Date:   Tue Apr 6 12:41:16 2021 +0200
+
+    Changed navbar, dropdown
+
+[33mcommit 374f14e1bb851541eb1a44bb8eb4e25f7871a7fa[m
+Merge: 4a2d0cf f6daa1a
+Author: Isha-00 <72806014+Isha-00@users.noreply.github.com>
+Date:   Tue Apr 6 12:25:22 2021 +0200
+
+    Merge pull request #16 from aistepk/improve_windInterface
+    
+    Improve wind interface
+
+[33mcommit f6daa1a87e91fe02f1ed9a7b47f7e149e45e6c71[m[33m ([m[1;31morigin/improve_windInterface[m[33m)[m
+Author: ShaSkol <shaism0914@skola.goteborg.se>
+Date:   Tue Apr 6 12:22:24 2021 +0200
+
+    pushing wind-interface
+
+[33mcommit aae9e3f28b5cebb0970099a1916e7804bec1c18e[m
+Author: Marre89 <git config --global user.email>
+Date:   Tue Apr 6 12:15:44 2021 +0200
+
+    new dropdown
+
+[33mcommit 05ab7bc765fb773832666b0f4199a85adb8bf0c6[m
+Author: ShaSkol <shaism0914@skola.goteborg.se>
+Date:   Mon Apr 5 17:09:14 2021 +0200
+
+    fix
+
+[33mcommit 949461c74ec6cc7f21e6c2e774748df323474e8d[m
+Merge: 30a62ad 4a2d0cf
+Author: ShaSkol <shaism0914@skola.goteborg.se>
+Date:   Mon Apr 5 17:06:40 2021 +0200
+
+    merged in latest master
+
+[33mcommit 30a62ad1f46242a20561fe16083f98859bf9fd84[m
+Author: ShaSkol <shaism0914@skola.goteborg.se>
+Date:   Mon Apr 5 16:58:00 2021 +0200
+
+    add table
+
+[33mcommit 4a2d0cfe74fa224fd3d2aee07b078a55899ee003[m
+Merge: c4a9799 bc825d1
+Author: Marius <72731967+Marre89@users.noreply.github.com>
+Date:   Mon Apr 5 13:58:35 2021 +0200
+
+    Merge pull request #15 from aistepk/Navbar
+    
+    Navbar
+
+[33mcommit bc825d198173a224e65d0a1f68401c8411e61969[m[33m ([m[1;31morigin/Navbar[m[33m)[m
+Author: Marre89 <git config --global user.email>
+Date:   Mon Apr 5 13:56:46 2021 +0200
+
+    changed spacing navbar
+
+[33mcommit 708dbbf84753da89762abc9f1f7de2841d8c462f[m
+Merge: 7f1a685 c4a9799
+Author: Marre89 <git config --global user.email>
+Date:   Mon Apr 5 13:53:10 2021 +0200
+
+    Merge branch 'master' into Navbar
+
+[33mcommit 7f1a685f72d2f459df72347ca62cacfd6602c062[m
+Author: Marre89 <git config --global user.email>
+Date:   Mon Apr 5 13:53:01 2021 +0200
+
+    New Navbar
+
+[33mcommit c4a9799b5505bf1263424fd8aa42e6a720c6dacb[m
+Merge: 4bea38a 431b83f
+Author: Marius <72731967+Marre89@users.noreply.github.com>
+Date:   Mon Apr 5 13:01:09 2021 +0200
+
+    Merge pull request #14 from aistepk/Clouds
+    
+    Clouds
+
+[33mcommit 431b83f66944937f62ebb9d7278e2af03e27dd0f[m
+Merge: e41d696 4bea38a
+Author: Marre89 <git config --global user.email>
+Date:   Mon Apr 5 12:57:19 2021 +0200
+
+    new files, and view Wind
+
+[33mcommit e41d69609b931ededeaa9407d3ff066c780d4c18[m
+Author: Marre89 <git config --global user.email>
+Date:   Mon Apr 5 12:52:50 2021 +0200
+
+    Added cloud, chart, renamed files
+
+[33mcommit 4bea38a1a1f8d55ab0f2ae08a5d6bab6dc906542[m
+Merge: f573ce0 e4be16e
+Author: Marius <72731967+Marre89@users.noreply.github.com>
+Date:   Mon Apr 5 12:26:18 2021 +0200
+
+    Merge pull request #13 from aistepk/wind
+    
+    Wind
+
+[33mcommit e4be16efaba7c5c1689cc5fecae6da0177c5d06c[m
+Author: Marre89 <git config --global user.email>
+Date:   Mon Apr 5 12:23:32 2021 +0200
+
+    lint fixes"
+
+[33mcommit aaae8734eebfe0aca4acf55100acd49cea283fd8[m
+Author: Marre89 <git config --global user.email>
+Date:   Mon Apr 5 12:18:57 2021 +0200
+
+    added dependencies
+
+[33mcommit 7990bd37e08710cd435a754772eec7dfeaaeb1d2[m
+Author: Marre89 <git config --global user.email>
+Date:   Mon Apr 5 12:05:31 2021 +0200
+
+    changes to layoute
+
+[33mcommit f573ce0618ed3b6d7b272592ce8241a4c973fa3f[m
+Merge: dc9a0c7 fd7ff08
+Author: ShaSkol <shaism0914@skola.goteborg.se>
+Date:   Sun Apr 4 21:38:17 2021 +0200
+
+    getting the latest update
+
+[33mcommit dc9a0c7220112434305b469f7d31911977f5e7b8[m
+Author: ShaSkol <shaism0914@skola.goteborg.se>
+Date:   Sun Apr 4 21:33:57 2021 +0200
+
+    adding the wind interface
+
+[33mcommit fd7ff080ca66ceeb0814fd9043f12d9afaca2d16[m
+Merge: 22e338d 26f554a
+Author: Marius <72731967+Marre89@users.noreply.github.com>
+Date:   Fri Mar 26 15:40:36 2021 +0100
+
+    Merge pull request #11 from aistepk/drop-down
+    
+    Added header, Drop-down-menu
+
+[33mcommit 26f554a63dee193a7f8d23924a6e53d368582b98[m
+Author: Marre89 <git config --global user.email>
+Date:   Fri Mar 26 14:43:24 2021 +0100
+
+    Added header
+
+[33mcommit 22e338d0ac0003a92463cf07a53bc32a8a838510[m
+Merge: 0c450a3 7ec5587
+Author: Aiste P <72742124+aistepk@users.noreply.github.com>
+Date:   Fri Mar 26 14:38:25 2021 +0100
+
+    Merge pull request #9 from aistepk/rain
+    
+    changed layout and design in Cards.vue and About.vue
+
+[33mcommit 7ec558776eb662860aa594fcb9a6137129246e3e[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Fri Mar 26 14:29:58 2021 +0100
+
+    adding small changes
+
+[33mcommit 9a57ec677e4c4dca47cf39a5ccfdcec5fc115d12[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Fri Mar 26 14:03:07 2021 +0100
+
+    fix prettier problem
+
+[33mcommit 66437a821e63f271fb5c0c707ba592ef5510207e[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Fri Mar 26 14:02:53 2021 +0100
+
+    fix prettier problem
+
+[33mcommit c9e9acd786a8ae4b789fee4ceacac8d0ee211530[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Fri Mar 26 13:55:03 2021 +0100
+
+    adding scss files
+
+[33mcommit cb9b9a004251de749000445d6e012cd9dcfbd5fb[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Fri Mar 26 13:54:09 2021 +0100
+
+    add css file
+
+[33mcommit b7398621e2826a576cc8fcf221d976dbcd1452ba[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Fri Mar 26 13:47:59 2021 +0100
+
+    added apexcharts
+
+[33mcommit 002b9b096ec0323f30c079d21517bd57891aa88a[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Fri Mar 26 13:46:56 2021 +0100
+
+    change layout, updated cards
+
+[33mcommit 6924400e4e8ecce219a584427b5ed5b3c040dcac[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Fri Mar 26 13:45:15 2021 +0100
+
+    adding final images
+
+[33mcommit 9421a339423444e9684b042bbdab9c0d91959c5c[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Fri Mar 26 13:40:36 2021 +0100
+
+    deleted images
+
+[33mcommit a8ffa97f346fcc8ff18ec2e894492bf08878df10[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Fri Mar 26 13:38:03 2021 +0100
+
+    add updated package-lock
+
+[33mcommit 3c921145dad837a5e8ce0f5467117207a2c48cbd[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Fri Mar 26 13:35:33 2021 +0100
+
+    adding apexcharts library
+
+[33mcommit 0c450a3933149c2902d84265415e58d9f4609f23[m
+Merge: e4507c4 8ab076b
+Author: Marius <72731967+Marre89@users.noreply.github.com>
+Date:   Mon Mar 22 23:32:42 2021 +0100
+
+    Merge pull request #7 from aistepk/Header
+    
+    Header
+
+[33mcommit 8ab076b436b90a964cda8d3639d0ba1c5c70480a[m
+Author: Marre89 <git config --global user.email>
+Date:   Mon Mar 22 23:30:52 2021 +0100
+
+    Added DropDown, fixed Cards component
+
+[33mcommit f6e5b95553ad16976b89c35ebb0db01ecfc38909[m
+Author: Marre89 <git config --global user.email>
+Date:   Mon Mar 22 21:10:14 2021 +0100
+
+    Changes to Header
+
+[33mcommit 4319fa415edf506330e2bf8734bcab9ee66e93ec[m
+Author: Marre89 <git config --global user.email>
+Date:   Mon Mar 22 16:54:02 2021 +0100
+
+    changed header & layout
+
+[33mcommit e4507c4ffda9cb71acafd395801792beb5f16d07[m
+Merge: 0ff2833 11a191b
+Author: Marius <72731967+Marre89@users.noreply.github.com>
+Date:   Mon Mar 22 14:36:08 2021 +0100
+
+    Merge pull request #6 from aistepk/forecastm
+    
+    Forecastm
+
+[33mcommit 11a191be63a79d468bcb70d76e02de712f042b5e[m
+Merge: f28718a 0ff2833
+Author: Marre89 <git config --global user.email>
+Date:   Mon Mar 22 14:29:02 2021 +0100
+
+    Solved merge conflict
+
+[33mcommit f28718ae74e08cb10c17a5231928d783b97489cf[m
+Author: Marre89 <git config --global user.email>
+Date:   Mon Mar 22 14:09:38 2021 +0100
+
+    changed ForecastService
+
+[33mcommit 54b05d8e51be65693fa6288b6b5f750e7dee0631[m
+Author: Marre89 <git config --global user.email>
+Date:   Mon Mar 22 14:01:40 2021 +0100
+
+    Added component header & services class
+
+[33mcommit 0ff28339ec47563278d9b5a9c4c62cdd9aaeaea5[m
+Merge: 1c26938 2acce86
+Author: Aiste P <72742124+aistepk@users.noreply.github.com>
+Date:   Mon Mar 22 13:56:38 2021 +0100
+
+    Merge pull request #4 from aistepk/startview
+    
+    Startview
+
+[33mcommit 2acce86af30b81a1b0de3c29977f96cc8491b0b1[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Mon Mar 22 13:53:07 2021 +0100
+
+    changed one route
+
+[33mcommit 9d87c203d09f8acfd510d4e0e1eaa01180dc5a50[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Mon Mar 22 13:52:10 2021 +0100
+
+    adding small changes to About view
+
+[33mcommit adce7c94a111563a97f426429417ef094f666742[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Mon Mar 22 13:50:59 2021 +0100
+
+    adding About and Card components
+
+[33mcommit 84e7f5b8b753d59a3f5c7ac66eec5acc16dba2ac[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Mon Mar 22 13:24:54 2021 +0100
+
+    adding router to main.js
+
+[33mcommit a9530309ea00da3b9e32763be84ce354cdeddbb5[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Mon Mar 22 13:20:02 2021 +0100
+
+    adding views
+
+[33mcommit 7e361f3cf8924fe7bcc2d6be8c08fbea6360cf9a[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Mon Mar 22 13:17:51 2021 +0100
+
+    adding router-view
+
+[33mcommit 53cc854924746475d0d1665bd266d83ac535c187[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Mon Mar 22 13:16:09 2021 +0100
+
+    add another placeholder
+
+[33mcommit c63611e2c2c20e5f4d7d29d4ddd2cae88b385d7c[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Mon Mar 22 13:14:10 2021 +0100
+
+    adding placeholder pictures
+
+[33mcommit 3a97d3a5d79c246f9732025ce7ca6427fe79ed5b[m
+Merge: 9ab2f9b 1c26938
+Author: Marre89 <git config --global user.email>
+Date:   Sun Mar 21 17:45:06 2021 +0100
+
+    Merge remote-tracking branch 'origin' into startview
+
+[33mcommit 9ab2f9bc92c1b356df0d17a1432e6a4010c66f2e[m
+Author: Marre89 <git config --global user.email>
+Date:   Sun Mar 21 17:43:53 2021 +0100
+
+    Fetch forecast"
+
+[33mcommit 9220c85cbdad601f93644a92afdfdeaa677dc1f7[m
+Author: Marre89 <git config --global user.email>
+Date:   Sun Mar 21 17:10:54 2021 +0100
+
+    Header update
+
+[33mcommit 053eda7beaca6267600ea0d2332f2b74a429db35[m
+Author: Marre89 <git config --global user.email>
+Date:   Sun Mar 21 16:55:29 2021 +0100
+
+    service
+
+[33mcommit d6d56b69866fb344ad3608de46dcb306c03c8633[m
+Author: Marre89 <git config --global user.email>
+Date:   Sun Mar 21 16:47:32 2021 +0100
+
+    Changed App and Navbar"
+
+[33mcommit 1c2693837238a423e07272431ae86a0875f2c91b[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Sun Mar 21 16:40:21 2021 +0100
+
+    updated package.json
+
+[33mcommit 10f6e05fc4bec0e3cbff343c5ebc637a02d3545d[m
+Author: Marre89 <git config --global user.email>
+Date:   Fri Mar 19 09:23:38 2021 +0100
+
+    bootstrap
+
+[33mcommit 949b0d87e1339317a68dfb44c57735efdb9e80a6[m
+Author: Marre89 <git config --global user.email>
+Date:   Thu Mar 18 14:28:24 2021 +0100
+
+    installed Vue-router
+
+[33mcommit 76e06b08e9d65ac99554f847e1a7ff378c796424[m
+Merge: c7b226b b3c68fa
+Author: Aiste P <72742124+aistepk@users.noreply.github.com>
+Date:   Tue Mar 16 20:30:12 2021 +0100
+
+    Merge pull request #1 from aistepk/circleci-project-setup
+    
+    Circleci project setup
+
+[33mcommit c7b226b7f71b02429a42aaf1d38e80eda23b373a[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Tue Mar 16 20:22:55 2021 +0100
+
+    adjusted welcome page
+
+[33mcommit b3c68fac95017f127b49ac54dd4c6910e188bf32[m
+Author: Aiste P <72742124+aistepk@users.noreply.github.com>
+Date:   Tue Mar 16 20:11:44 2021 +0100
+
+    Updated config.yml
+
+[33mcommit 8cc522d46f1ba6d7f5d24b2303f388dccd2f0082[m
+Author: Aiste P <72742124+aistepk@users.noreply.github.com>
+Date:   Tue Mar 16 20:04:42 2021 +0100
+
+    Updated config.yml
+
+[33mcommit f89d39a840b5e8883c17a9d8ad666d85bef36a05[m
+Author: Aiste P <72742124+aistepk@users.noreply.github.com>
+Date:   Tue Mar 16 18:58:24 2021 +0100
+
+    Add .circleci/config.yml
+
+[33mcommit b6baf4526758af7ebfd2287a6b14c135c7b1e8b3[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Tue Mar 16 16:30:57 2021 +0100
+
+    added prettierrc and changed default port in package.json
+
+[33mcommit baf8fb0e035e3b7f872854eddb0739a1a0934d06[m
+Author: Aiste PK <p.aiste@ymail.com>
+Date:   Tue Mar 16 15:52:52 2021 +0100
+
+    init
