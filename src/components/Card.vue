@@ -3,7 +3,7 @@
         <img src="../assets/startsida.jpg" class="start-image" />
     </div>
     <div class="row">
-        <div class="card shadow-sm p-3 mb-5 zoom card-image bg-transparent" v-for="(obj, key) in cardJson" :key="key">
+        <div class="card shadow-sm p-2 mb-5 zoom card-image bg-transparent" v-for="(obj, key) in cardJson" :key="key">
             <router-link :to="obj.path" class="txt">
                 <div class="card-body">
                     <div class="d-flex justify-content-around">
@@ -30,25 +30,25 @@ export default {
                 {
                     img: require("../assets/kort-regn.jpg"),
                     caption: "Regn",
-                    title: "Some text about rain",
+                    title: "Nederbörd de närmaste timmarna",
                     path: "/rain",
                 },
                 {
                     img: require("../assets/kort-moln.jpg"),
                     caption: "Moln",
-                    title: "Some text about clouds",
+                    title: "Molnighet de närmaste timmarna",
                     path: "/clouds",
                 },
                 {
                     img: require("../assets/kort-vind.jpg"),
                     caption: "Vind",
-                    title: "Some text about wind",
+                    title: "Vindhastighet just nu",
                     path: "/wind",
                 },
                 {
                     img: require("../assets/kort-omoss.jpg"),
                     caption: "Om oss",
-                    title: "About us",
+                    title: "Vi i teamet",
                     path: "/about",
                 },
             ],
@@ -61,6 +61,7 @@ export default {
 .txt {
     text-decoration: none;
     color: black;
+    text-align: left;
 }
 
 .zoom {
@@ -86,4 +87,5 @@ export default {
     width: 100%;
     padding: 15px;
 }
+
 </style>

@@ -3,11 +3,13 @@
         <div class="d-flex align-items-center flex-column" style="height: 130px">
             <div class="mb-auto p-2"><strong>Om oss</strong></div>
             <div class="p-2">Vi är ett gäng surikater som gillar Java, UX och väder</div>
-            <div class="p-2">Du kan nå oss på surikat@väder.se</div>
+            <div class="p-2">Du kan nå oss på surikat@väder.se
+            </div>
+            
         </div>
 
         <div class="row row-cols-2">
-            <div class="card mb-3 shadow-sm p-3 mb-5 zoom card bg-transparent" v-for="(obj, key) in people" :key="key">
+            <div class="card mt-3 mb-3 shadow-sm p-2 mb-4 zoom card bg-transparent" v-for="(obj, key) in people" :key="key">
                 <div class="row">
                     <div class="col">
                         <div class="card-body">
@@ -97,4 +99,5 @@ export default {
 .card-img-top {
     width: 80%;
 }
+
 </style>

@@ -1,10 +1,11 @@
 <template>
-    <div>
+    <div class="cities-select-container">
         <select
             class="form-select form-select-sm"
             aria-label=".form-select-sm example"
             v-model="selectedOption"
             v-on:change="optionChange"
+            id="dropdown-menu"
         >
             <option :value="obj" selected v-for="(obj, city) in cities" :key="city">
                 {{ obj.name }}
@@ -139,9 +140,13 @@ export default {
         }
     },
     methods: {
-        optionChange: function () {
+        optionChange: function() {
             this.$emit("update", this.selectedOption)
         },
     },
 }
 </script>
+
+<style>
+
+</style>
