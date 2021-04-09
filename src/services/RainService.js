@@ -8,19 +8,17 @@ async function getAPI(lng, lat) {
 }
 
 async function findRain(lng, lat) {
-    let rainData = await getAPI(lng, lat)
-    for (const hourlyData of rainData.timeSeries) {
-        const rain = getParameters(hourlyData.parameters)
-        return rain
-    }
-}
-
-function getParameters(parameters) {
-    for (const param of parameters) {
-        if (param.name === "pmean") {
-            return param.values[0]
-        }
-    }
+    let tccData = await getAPI(lng, lat)
+    let rainValues = []
+    rainValues.push(tccData.timeSeries[2].parameters[3].values[0])
+    rainValues.push(tccData.timeSeries[3].parameters[3].values[0])
+    rainValues.push(tccData.timeSeries[4].parameters[3].values[0])
+    rainValues.push(tccData.timeSeries[5].parameters[3].values[0])
+    rainValues.push(tccData.timeSeries[6].parameters[16].values[0])
+    rainValues.push(tccData.timeSeries[7].parameters[16].values[0])
+    rainValues.push(tccData.timeSeries[8].parameters[16].values[0])
+    rainValues.push(tccData.timeSeries[9].parameters[16].values[0])
+    return rainValues
 }
 
 export default findRain

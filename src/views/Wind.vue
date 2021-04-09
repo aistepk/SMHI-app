@@ -71,6 +71,7 @@
 <script>
 import findWindSpeed from "../services/WindService.js"
 import DropDownCities from "../components/DropDownCities"
+
 export default {
     name: "Wind",
     components: { DropDownCities },
@@ -81,7 +82,7 @@ export default {
         }
     },
     async created() {
-        this.wind = await findWindSpeed(16.158, 58.5812)
+        this.wind = await findWindSpeed(11.89, 57.69)
     },
     methods: {
         getTemperate() {

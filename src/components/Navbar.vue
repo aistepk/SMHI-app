@@ -17,7 +17,7 @@
                 <a class="navbar-brand" href="#"
                     ><img src="../assets/meerk.svg" alt="meerk" width="150" height="125"
                 /></a>
-                <div v-if="weather > 0 && weather < 4">
+                <div v-if="weather > 0 && weather < 3">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -31,7 +31,7 @@
                         />
                     </svg>
                 </div>
-                <div v-if="weather > 3 && weather < 8">
+                <div v-if="weather > 2 && weather < 5">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -48,7 +48,21 @@
                         />
                     </svg>
                 </div>
-                <div v-if="weather >= 8">
+                <div v-if="weather > 4 && weather < 8">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-cloudy"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                            d="M13.405 8.527a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 14.5H13a3 3 0 0 0 .405-5.973zM8.5 5.5a4 4 0 0 1 3.976 3.555.5.5 0 0 0 .5.445H13a2 2 0 0 1-.001 4H3.5a2.5 2.5 0 1 1 .605-4.926.5.5 0 0 0 .596-.329A4.002 4.002 0 0 1 8.5 5.5z"
+                        />
+                    </svg>
+                </div>
+                <div v-if="weather > 7 && weather < 28">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="16"
@@ -144,7 +158,7 @@
                         </li>
                     </ul>
                     <div class="d-flex me-10">
-                        <drop-down-cities @update="getTemp" />
+                        <drop-down-cities @update="getData" />
                     </div>
                 </div>
             </div>
@@ -155,6 +169,8 @@
 import DropDownCities from "./DropDownCities.vue"
 import findTemp from "../services/ForecastService.js"
 import findWS from "../services/WeatherService.js"
+import findWindSpeed from "../services/WindService.js"
+
 export default {
     name: "Navbar",
     components: { DropDownCities },
@@ -162,20 +178,20 @@ export default {
         return {
             temp: {},
             weather: {},
+            windSpeed: {},
         }
     },
     async created() {
-        this.temp = await findTemp(16.158, 58.5812)
-        this.weather = await findWS(16.158, 58.5812)
+        this.temp = await findTemp(11.89, 57.69)
+        this.weather = await findWS(11.89, 57.69)
+        this.windSpeed = await findWindSpeed(11.89, 57.69)
     },
     methods: {
-        async getTemp(value) {
+        async getData(value) {
             console.log(value)
             this.temp = await findTemp(value.lng, value.lat)
-        },
-        async getWS(value) {
-            console.log(value)
             this.weather = await findWS(value.lng, value.lat)
+            this.windSpeed = await findWindSpeed(value.lng, value.lat)
         },
     },
 }

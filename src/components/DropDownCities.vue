@@ -139,7 +139,7 @@ export default {
         }
     },
     methods: {
-        optionChange: function () {
+        optionChange: function() {
             this.$emit("update", this.selectedOption)
         },
     },

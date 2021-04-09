@@ -9,7 +9,7 @@
 
 <script>
 import DropDownCities from "../components/DropDownCities.vue"
-import axios from "axios"
+import findRain from "../services/RainService"
 let today = new Date()
 let current = today.getHours()
 let currentPlusOne = today.getHours() + 1
@@ -20,13 +20,6 @@ let currentPlusFive = today.getHours() + 5
 let currentPlusSix = today.getHours() + 6
 let currentPlusSeven = today.getHours() + 7
 const values = []
-// let currentPlusOne
-// let currentPlusTwo
-// let currentPlusThree
-// let currentPlusFour
-// let currentPlusFive
-// let currentPlusSix
-// let currentPlusSeven
 export default {
     name: "Rain",
     components: { DropDownCities },
@@ -63,25 +56,14 @@ export default {
     },
 
     async created() {
-        // this.rain = await findRain(16.158, 58.5812)
-        const BASE_URL = "https://opendata-download-metfcst.smhi.se/api"
-        const url = `${BASE_URL}/category/pmp3g/version/2/geotype/point/lon/16.158/lat/58.5812/data.json`
-        const data = await axios.get(url)
-        console.log(data)
-        values.push(data.data.timeSeries[2].parameters[3].values[0])
-        values.push(data.data.timeSeries[3].parameters[3].values[0])
-        values.push(data.data.timeSeries[4].parameters[3].values[0])
-        values.push(data.data.timeSeries[5].parameters[3].values[0])
-        values.push(data.data.timeSeries[6].parameters[16].values[0])
-        values.push(data.data.timeSeries[7].parameters[16].values[0])
-        values.push(data.data.timeSeries[8].parameters[16].values[0])
-        values.push(data.data.timeSeries[9].parameters[16].values[0])
+        this.rain = await findRain(11.89, 57.69)
+        console.log(this.rain)
     },
     methods: {},
 }
 </script>
 
-<style scoped> 
+<style scoped>
 h3 {
     text-align: center;
 }
@@ -91,5 +73,4 @@ h3 {
     align-items: center;
     justify-content: center;
 }
-
 </style>
