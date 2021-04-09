@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid" style="height: 150px">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
+            <div class="container-fluid" id="nav-col">
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -201,5 +201,8 @@ export default {
 .txt {
     text-decoration: none;
     color: black;
+}
+#nav-col {
+    background-color: #5ab4b4;
 }
 </style>

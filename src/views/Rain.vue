@@ -3,7 +3,8 @@
     <h4>Välj Stad</h4>
     <drop-down-cities @update="getWind" />
     <div class="mt-4" id="chart">
-        <apexchart height="350" width="600" type="line" :options="options" :series="series"></apexchart>
+                <apexchart style="margin-top: 30px" class="apex" type="line" :options="options" :series="series"></apexchart>
+
     </div>
 </template>
 
@@ -68,9 +69,14 @@ h3 {
     text-align: center;
 }
 
-#chart {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@media screen and (min-width: 576px) {
+    .apex {
+        width: 40%;
+    }
+    .center {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
 }
 </style>

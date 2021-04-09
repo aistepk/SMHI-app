@@ -41,7 +41,7 @@
                 Vindhastighet eller vidstyrka är ett mått på hastigheten av stora och svaga vindar. Vindhastighet anges
                 i antingen i meter per sekund eller Beaufortgrader
             </p>
-            <table class="table table-bordered border border-3">
+            <table>
                 <thead>
                     <tr class="border border-4">
                         <th scope="col" class="table-active">m/s</th>
@@ -106,5 +106,14 @@ img {
 }
 p {
     text-align: center;
+}
+@media screen and (min-width: 576px) {
+    img {
+        width: 40%;
+    }
+    .desktop {
+        display: flex;
+        flex-direction: row;
+    }
 }
 </style>
