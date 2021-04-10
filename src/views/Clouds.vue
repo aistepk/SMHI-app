@@ -1,26 +1,30 @@
 <template>
+    <h4>Molnighet just nu</h4>
+    <h7 class="col-1">Välj Stad</h7>
+    <div class="row justify-content-left">
+        <drop-down-cities class="col-10" @update="getClouds" />
+    </div>
+
     <div class="container">
-        <h4>Molnighet just nu</h4>
-        <h7 class="col-1">Välj Stad</h7>
-        <div class="row justify-content-left">
-            <drop-down-cities class="col-10" @update="getClouds" />
+        <div id="chart1" class="box1">
+            {{ currentHour }}
+            <apexchart type="pie" :options="chartOptions1" :series="series1"></apexchart>
         </div>
-    </div>
-    {{ currentHour }}
-    <div id="chart1">
-        <apexchart type="pie" :options="chartOptions1" :series="series1"></apexchart>
-    </div>
-    {{ hourPlusOne }}
-    <div id="chart2">
-        <apexchart type="pie" :options="chartOptions2" :series="series2"></apexchart>
-    </div>
-    {{ hourPlusTwo }}
-    <div id="chart3">
-        <apexchart type="pie" :options="chartOptions3" :series="series3"></apexchart>
-    </div>
-    {{ hourPlusThree }}
-    <div id="chart3">
-        <apexchart type="pie" :options="chartOptions4" :series="series4"></apexchart>
+
+        <div id="chart2" class="box2">
+            {{ hourPlusOne }}
+            <apexchart type="pie" :options="chartOptions2" :series="series2"></apexchart>
+        </div>
+
+        <div id="chart3" class="box3">
+            {{ hourPlusTwo }}
+            <apexchart type="pie" :options="chartOptions3" :series="series3"></apexchart>
+        </div>
+
+        <div id="chart3" class="box4">
+            {{ hourPlusThree }}
+            <apexchart type="pie" :options="chartOptions4" :series="series4"></apexchart>
+        </div>
     </div>
     <div class="mt-4">
         Molnmängd eller molnighet indikerar hur stor andel av himmelen som täcks av moln. Molnighet <br />
@@ -210,5 +214,50 @@ h4 {
     border: 3px solid lightgray;
     padding: 1em;
     font-family: "Open-sans";
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.box1 {
+    grid-column: 3;
+    grid-row: 1;
+}
+.box2 {
+    grid-column: 2;
+    grid-row: 2;
+}
+.box3 {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.box4 {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr;
+    }
+    .box1 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .box2 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .box3 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .box4 {
+        grid-column: 3;
+        grid-row: 2;
+    }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div class="container-fluid" style="height: 150px">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="z-index: 1000">
             <div class="container-fluid" id="nav-col">
                 <button
                     class="navbar-toggler"
@@ -80,7 +80,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
+                        <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
                             <router-link class="nav-link active" to="/clouds">
                                 <div class="d-block d-lg-none">
                                     <svg
@@ -99,7 +99,7 @@
                                 Moln
                             </router-link>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
                             <router-link class="nav-link active" to="/rain">
                                 <div class="d-block d-lg-none">
                                     <svg
@@ -118,7 +118,7 @@
                                 Regn
                             </router-link>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
                             <router-link class="nav-link active" to="/wind">
                                 <div class="d-block d-lg-none">
                                     <svg
@@ -137,7 +137,7 @@
                                 Vind
                             </router-link>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
                             <router-link class="nav-link active" to="/about">
                                 <div class="d-block d-lg-none">
                                     <svg
@@ -204,5 +204,10 @@ export default {
 }
 #nav-col {
     background-color: #5ab4b4;
+}
+@media screen and (max-width: 576px) {
+    .cities-select-container {
+        display: none;
+    }
 }
 </style>
