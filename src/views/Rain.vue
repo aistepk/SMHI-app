@@ -80,6 +80,7 @@ export default {
         const BASE_URL = "https://opendata-download-metfcst.smhi.se/api"
         const url = `${BASE_URL}/category/pmp3g/version/2/geotype/point/lon/11.89/lat/57.69/data.json`
         let data = await axios.get(url)
+        console.log(data)
         console.log(data.data.timeSeries[0].validTime)
         let rainData = await findRain(11.89, 57.69)
         console.log(rainData)
