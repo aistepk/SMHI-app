@@ -10,6 +10,13 @@
 <script>
 import DropDownCities from "../components/DropDownCities.vue"
 import findRain from "../services/RainService"
+import axios from "axios"
+let test = "yeaboi"
+let test2 = test.split("b")
+let first = test2[0]
+let second = test2[1]
+console.log(first)
+console.log(second)
 let today = new Date()
 let current = today.getHours()
 let currentPlusOne = today.getHours() + 1
@@ -41,10 +48,24 @@ export default {
                         currentPlusSix,
                         currentPlusSeven,
                     ],
+                    title: {
+                        text: "Tid på dygnet",
+                        align: "right",
+                    },
                 },
-                title: {
-                    text: "Nederbörd i mm",
-                    align: "left",
+
+                colors: ['#000'],
+
+                stroke: {
+                    curve: 'smooth',
+                    width: 2
+                },
+
+                yaxis: {
+                    title: {
+                        text: "Nederbörd i mm",
+                        align: "right",
+                    },
                 },
             },
             series: [
@@ -56,6 +77,10 @@ export default {
     },
 
     async created() {
+        const BASE_URL = "https://opendata-download-metfcst.smhi.se/api"
+        const url = `${BASE_URL}/category/pmp3g/version/2/geotype/point/lon/11.89/lat/57.69/data.json`
+        let data = await axios.get(url)
+        console.log(data.data.timeSeries[0].validTime)
         let rainData = await findRain(11.89, 57.69)
         console.log(rainData)
         values.push(rainData[0])

@@ -78,18 +78,12 @@ export default {
     data() {
         return {
             wind: {},
-            // temperate: {},
         }
     },
     async created() {
         this.wind = await findWindSpeed(11.89, 57.69)
     },
     methods: {
-        getTemperate() {
-            if (this.wind >= 4 && this.wind <= 7.9) {
-                // this.temperate = this.wind
-            }
-        },
         async getWind(value) {
             console.log(value)
             this.wind = await findWindSpeed(value.lng, value.lat)
@@ -106,6 +100,11 @@ img {
 }
 p {
     text-align: center;
+}
+.table-responsive.mt-4 {
+    border: 3px solid lightgray;
+    padding: 1em;
+    font-family: "Open sans";
 }
 @media screen and (min-width: 576px) {
     img {

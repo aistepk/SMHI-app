@@ -206,4 +206,9 @@ export default {
 h4 {
     text-align: center;
 }
+.mt-4 {
+    border: 3px solid lightgray;
+    padding: 1em;
+    font-family: "Open-sans";
+}
 </style>
