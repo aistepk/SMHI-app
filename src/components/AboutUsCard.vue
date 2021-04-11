@@ -3,13 +3,15 @@
         <div class="d-flex align-items-center flex-column" style="height: 130px">
             <div class="mb-auto p-2"><strong>Om oss</strong></div>
             <div class="p-2">Vi är ett gäng surikater som gillar Java, UX och väder</div>
-            <div class="p-2">Du kan nå oss på surikat@väder.se
-            </div>
-            
+            <div class="p-2">Du kan nå oss på surikat@väder.se</div>
         </div>
 
         <div class="row row-cols-2">
-            <div class="card mt-3 mb-3 shadow-sm p-2 mb-4 zoom card bg-transparent" v-for="(obj, key) in people" :key="key">
+            <div
+                class="card mt-3 box-shadow p-2 mb-4 zoom bg-transparent"
+                v-for="(obj, key) in people"
+                :key="key"
+            >
                 <div class="row">
                     <div class="col">
                         <div class="card-body">
@@ -76,6 +78,14 @@ export default {
 </script>
 
 <style>
+.card-title {
+    font-size: 30px;
+    font-family: Montserrat;
+}
+.card-text {
+     font-family: "Open sans";
+    font-size: 16px;
+}
 .center {
     display: flex;
     align-items: center;
@@ -84,20 +94,24 @@ export default {
 
 .zoom {
     background-color: green;
-    transition: transform 0.3s; /* Animation */
+    transition: transform 0.3s; 
     margin: 0 auto;
 }
 
 .zoom:hover {
-    transform: scale(1.1); /* (150% zoom)*/
+    transform: scale(1.1); 
 }
 
 .card {
-    width: 20rem; /* Using this as an example, you can keep 20rem */
-    overflow: hidden; /* Optional */
+    width: 20rem; 
+    overflow: hidden; 
 }
 .card-img-top {
     width: 80%;
 }
 
+.box-shadow {
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+}
+ 
 </style>

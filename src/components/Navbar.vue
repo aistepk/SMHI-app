@@ -20,10 +20,10 @@
                 <div v-if="weather > 0 && weather < 3">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
+                        width="25"
+                        height="25"
                         fill="currentColor"
-                        class="bi bi-sun"
+                        class="bi bi-sun svg-temp"
                         viewBox="0 0 16 16"
                     >
                         <path
@@ -34,10 +34,10 @@
                 <div v-if="weather > 2 && weather < 5">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
+                        width="25"
+                        height="25"
                         fill="currentColor"
-                        class="bi bi-cloud-sun"
+                        class="bi bi-cloud-sun svg-temp"
                         viewBox="0 0 16 16"
                     >
                         <path
@@ -51,10 +51,10 @@
                 <div v-if="weather > 4 && weather < 8">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
+                        width="25"
+                        height="25"
                         fill="currentColor"
-                        class="bi bi-cloudy"
+                        class="bi bi-cloudy svg-temp"
                         viewBox="0 0 16 16"
                     >
                         <path
@@ -68,7 +68,7 @@
                         width="16"
                         height="16"
                         fill="currentColor"
-                        class="bi bi-cloud-rain"
+                        class="bi bi-cloud-rain svg-temp"
                         viewBox="0 0 16 16"
                     >
                         <path
@@ -76,13 +76,18 @@
                         />
                     </svg>
                 </div>
-                <div>{{ temp }} C</div>
+
+                <div id="temp">{{ temp }} &deg;</div>
 
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
+                        <li class="nav-item">
                             <router-link class="nav-link active" to="/clouds">
-                                <div class="d-block d-lg-none">
+                                <div
+                                    class="d-block d-lg-none"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target=".navbar-collapse.show"
+                                >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="30"
@@ -99,9 +104,13 @@
                                 Moln
                             </router-link>
                         </li>
-                        <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
+                        <li class="nav-item">
                             <router-link class="nav-link active" to="/rain">
-                                <div class="d-block d-lg-none">
+                                <div
+                                    class="d-block d-lg-none"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target=".navbar-collapse.show"
+                                >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="30"
@@ -118,9 +127,13 @@
                                 Regn
                             </router-link>
                         </li>
-                        <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
+                        <li class="nav-item">
                             <router-link class="nav-link active" to="/wind">
-                                <div class="d-block d-lg-none">
+                                <div
+                                    class="d-block d-lg-none"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target=".navbar-collapse.show"
+                                >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="30"
@@ -137,9 +150,13 @@
                                 Vind
                             </router-link>
                         </li>
-                        <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
+                        <li class="nav-item">
                             <router-link class="nav-link active" to="/about">
-                                <div class="d-block d-lg-none">
+                                <div
+                                    class="d-block d-lg-none"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target=".navbar-collapse.show"
+                                >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="30"
@@ -202,12 +219,28 @@ export default {
     text-decoration: none;
     color: black;
 }
+
+#temp {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.svg-temp {
+    width: 28px;
+    height: 28px;
+}
+
 #nav-col {
     background-color: #5ab4b4;
 }
 @media screen and (max-width: 576px) {
     .cities-select-container {
         display: none;
+    }
+
+    #temp {
     }
 }
 </style>

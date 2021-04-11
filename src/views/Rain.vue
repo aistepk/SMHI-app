@@ -1,10 +1,12 @@
 <template>
-    <h3>Nederbörd just nu</h3>
+<div>
+    <h4>Nederbörd just nu</h4>
     <h4>Välj Stad</h4>
     <drop-down-cities @update="getWind" />
-    <div class="mt-4" id="chart">
+    <div class="mt-4 center">
         <apexchart style="margin-top: 30px" class="apex" type="line" :options="options" :series="series"></apexchart>
     </div>
+</div>
 </template>
 
 <script>
@@ -54,11 +56,11 @@ export default {
                     },
                 },
 
-                colors: ['#000'],
+                colors: ["#000"],
 
                 stroke: {
-                    curve: 'smooth',
-                    width: 2
+                    curve: "smooth",
+                    width: 2,
                 },
 
                 yaxis: {
@@ -98,18 +100,25 @@ export default {
 </script>
 
 <style scoped>
-h3 {
+
+h4 {
     text-align: center;
+    font-family: Montserrat;
 }
 
 @media screen and (min-width: 576px) {
     .apex {
         width: 40%;
     }
-    .center {
+  
+}
+
+@media screen and (min-width: 768px) {
+ .center {
         margin-top: 30px;
         display: flex;
         justify-content: center;
     }
+  
 }
 </style>

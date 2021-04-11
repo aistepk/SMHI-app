@@ -1,52 +1,63 @@
 <template>
+<div>
     <h4>Molnighet just nu</h4>
     <h7 class="col-1">Välj Stad</h7>
     <div class="row justify-content-left">
         <drop-down-cities class="col-10" @update="getClouds" />
     </div>
 
-    <div class="container">
-        <div id="chart1" class="box1">
-            {{ currentHour }}
-            <apexchart type="pie" :options="chartOptions1" :series="series1"></apexchart>
-        </div>
+    <div class="wrapper">
+        <div class="big-box1">
+            <div class="container">
+                <div id="chart1" class="box1">
+                    <div class="hour-style">{{ currentHour }}</div>
+                    <apexchart type="pie" :options="chartOptions1" :series="series1"></apexchart>
+                </div>
 
-        <div id="chart2" class="box2">
-            {{ hourPlusOne }}
-            <apexchart type="pie" :options="chartOptions2" :series="series2"></apexchart>
-        </div>
+                <div id="chart2" class="box2">
+                    <div class="hour-style">{{ hourPlusOne }}</div>
+                    <apexchart type="pie" :options="chartOptions2" :series="series2"></apexchart>
+                </div>
 
-        <div id="chart3" class="box3">
-            {{ hourPlusTwo }}
-            <apexchart type="pie" :options="chartOptions3" :series="series3"></apexchart>
-        </div>
+                <div id="chart3" class="box3">
+                    <div class="hour-style">{{ hourPlusTwo }}</div>
+                    <apexchart type="pie" :options="chartOptions3" :series="series3"></apexchart>
+                </div>
 
-        <div id="chart3" class="box4">
-            {{ hourPlusThree }}
-            <apexchart type="pie" :options="chartOptions4" :series="series4"></apexchart>
+                <div id="chart3" class="box4">
+                    <div class="hour-style">{{ hourPlusThree }}</div>
+                    <apexchart type="pie" :options="chartOptions4" :series="series4"></apexchart>
+                </div>
+            </div>
+        </div>
+        <div class="big-box2">
+            <div class="mt-4">
+                Molnmängd eller molnighet indikerar hur stor andel av himmelen som täcks av moln. Molnighet <br />
+                mäts i vad som kallas "octas" eller åttondelar där noll oktas (0/8) anger molnfritt och åtta oktas (8/8)
+                helt mulet.
+            </div>
         </div>
     </div>
-    <div class="mt-4">
-        Molnmängd eller molnighet indikerar hur stor andel av himmelen som täcks av moln. Molnighet <br />
-        mäts i vad som kallas "octas" eller åttondelar där noll oktas (0/8) anger molnfritt och åtta oktas (8/8) helt
-        mulet.
-    </div>
+</div>
 </template>
 <script>
 import findCloudCover from "../services/CloudService"
 import DropDownCities from "../components/DropDownCities"
+
+let currentHour
+
 export default {
     name: "Clouds",
     components: { DropDownCities },
     data() {
         return {
             cloudCover: [],
-            currentHour: {},
             hourPlusOne: {},
             hourPlusTwo: {},
             hourPlusThree: {},
             name: "Hello woeld",
             series1: [],
+
             chartOptions1: {
                 chart: {
                     width: "100%",
@@ -58,6 +69,9 @@ export default {
                     monochrome: {
                         enabled: false,
                     },
+                },
+                title: {
+                    text: currentHour,
                 },
                 plotOptions: {
                     pie: {
@@ -209,11 +223,18 @@ export default {
 <style scoped>
 h4 {
     text-align: center;
+    font-family: Montserrat;
+}
+
+.hour-style {
+    text-align: center;
+    font-weight: bold;
 }
 .mt-4 {
     border: 3px solid lightgray;
     padding: 1em;
     font-family: "Open-sans";
+    font-size: 16px;
 }
 .container {
     display: grid;
@@ -258,6 +279,23 @@ h4 {
     .box4 {
         grid-column: 3;
         grid-row: 2;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .big-box1 {
+        width: 100%;
+    }
+    .big-box2 {
+        width: 40%;
+        justify-content: flex-start;
+        margin-right: 200px;
+        margin-top: 70px;
     }
 }
 </style>

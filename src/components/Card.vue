@@ -1,9 +1,10 @@
 <template>
+<div>
     <div>
         <img src="../assets/startsida.jpg" class="start-image" />
     </div>
     <div class="row">
-        <div class="card shadow-sm p-2 mb-5 zoom card-image bg-transparent" v-for="(obj, key) in cardJson" :key="key">
+        <div class="card box-shadow p-2 mb-5 zoom card-image bg-transparent" v-for="(obj, key) in cardJson" :key="key">
             <router-link :to="obj.path" class="txt">
                 <div class="card-body">
                     <div class="d-flex justify-content-around">
@@ -19,6 +20,7 @@
             </router-link>
         </div>
     </div>
+</div>
 </template>
 
 <script>
@@ -58,6 +60,18 @@ export default {
 </script>
 
 <style scoped>
+.card-title {
+    font-size: 30px;
+    font-family: Montserrat;
+}
+.card-text {
+     font-family: "Open sans";
+    font-size: 16px;
+}
+
+
+
+
 .txt {
     text-decoration: none;
     color: black;
@@ -87,5 +101,7 @@ export default {
     width: 100%;
     padding: 15px;
 }
-
+.box-shadow {
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+}
 </style>
