@@ -1,24 +1,23 @@
 <template>
-<div>
-    <h4>Nederbörd just nu</h4>
-    <h4>Välj Stad</h4>
-    <drop-down-cities @update="getWind" />
-    <div class="mt-4 center">
-        <apexchart style="margin-top: 30px" class="apex" type="line" :options="options" :series="series"></apexchart>
+    <div>
+        <h4>Nederbörd just nu</h4>
+        <h4>Välj Stad</h4>
+        <drop-down-cities @update="getRain" />
+        <div class="mt-4 center">
+            <apexchart
+                style="margin-top: 30px"
+                class="apex"
+                type="line"
+                :options="options"
+                :series="series"
+            ></apexchart>
+        </div>
     </div>
-</div>
 </template>
 
 <script>
 import DropDownCities from "../components/DropDownCities.vue"
 import findRain from "../services/RainService"
-import axios from "axios"
-let test = "yeaboi"
-let test2 = test.split("b")
-let first = test2[0]
-let second = test2[1]
-console.log(first)
-console.log(second)
 let today = new Date()
 let current = today.getHours()
 let currentPlusOne = today.getHours() + 1
@@ -79,28 +78,36 @@ export default {
     },
 
     async created() {
-        const BASE_URL = "https://opendata-download-metfcst.smhi.se/api"
-        const url = `${BASE_URL}/category/pmp3g/version/2/geotype/point/lon/11.89/lat/57.69/data.json`
-        let data = await axios.get(url)
-        console.log(data)
-        console.log(data.data.timeSeries[0].validTime)
-        let rainData = await findRain(11.89, 57.69)
-        console.log(rainData)
-        values.push(rainData[0])
-        values.push(rainData[1])
-        values.push(rainData[2])
-        values.push(rainData[3])
-        values.push(rainData[4])
-        values.push(rainData[5])
-        values.push(rainData[6])
-        values.push(rainData[7])
+        this.rain = await findRain(11.89, 57.69)
+        console.log(this.rain)
+        values.push(this.rain[0])
+        values.push(this.rain[1])
+        values.push(this.rain[2])
+        values.push(this.rain[3])
+        values.push(this.rain[4])
+        values.push(this.rain[5])
+        values.push(this.rain[6])
+        values.push(this.rain[7])
     },
-    methods: {},
+    methods: {
+        async getRain(value) {
+            this.series[0].data.length = 0
+            this.rain = await findRain(value.lng, value.lat)
+            this.series[0].data.push(this.rain[0])
+            this.series[0].data.push(this.rain[1])
+            this.series[0].data.push(this.rain[2])
+            this.series[0].data.push(this.rain[3])
+            this.series[0].data.push(this.rain[4])
+            this.series[0].data.push(this.rain[5])
+            this.series[0].data.push(this.rain[6])
+            this.series[0].data.push(this.rain[7])
+            console.log(this.series)
+        },
+    },
 }
 </script>
 
 <style scoped>
-
 h4 {
     text-align: center;
     font-family: Montserrat;
@@ -110,15 +117,13 @@ h4 {
     .apex {
         width: 40%;
     }
-  
 }
 
 @media screen and (min-width: 768px) {
- .center {
+    .center {
         margin-top: 30px;
         display: flex;
         justify-content: center;
     }
-  
 }
 </style>

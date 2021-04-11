@@ -239,8 +239,5 @@ export default {
     .cities-select-container {
         display: none;
     }
-
-    #temp {
-    }
 }
 </style>
