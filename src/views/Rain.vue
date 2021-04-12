@@ -58,7 +58,7 @@ export default {
 
                 stroke: {
                     curve: "smooth",
-                    width: 2,
+                    width: 5,
                 },
 
                 yaxis: {
