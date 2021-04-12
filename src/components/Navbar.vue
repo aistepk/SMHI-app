@@ -15,7 +15,7 @@
                 </button>
 
                 <a class="navbar-brand" href="#"
-                    ><img src="../assets/meerk.svg" alt="meerk" width="150" height="125"
+                    ><img src="../assets/meerk.svg" alt="meerk" width="175" height="125"
                 /></a>
                 <div v-if="weather > 0 && weather < 3">
                     <svg
@@ -186,7 +186,6 @@
 import DropDownCities from "./DropDownCities.vue"
 import findTemp from "../services/ForecastService.js"
 import findWS from "../services/WeatherService.js"
-import findWindSpeed from "../services/WindService.js"
 
 export default {
     name: "Navbar",
@@ -201,14 +200,12 @@ export default {
     async created() {
         this.temp = await findTemp(11.89, 57.69)
         this.weather = await findWS(11.89, 57.69)
-        this.windSpeed = await findWindSpeed(11.89, 57.69)
     },
     methods: {
         async getData(value) {
-            console.log(value)
             this.temp = await findTemp(value.lng, value.lat)
             this.weather = await findWS(value.lng, value.lat)
-            this.windSpeed = await findWindSpeed(value.lng, value.lat)
+            console.log(value)
         },
     },
 }

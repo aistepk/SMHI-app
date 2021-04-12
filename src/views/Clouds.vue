@@ -55,7 +55,7 @@ export default {
             hourPlusOne: {},
             hourPlusTwo: {},
             hourPlusThree: {},
-            name: "Hello woeld",
+            name: "Hello world",
             series1: [],
 
             chartOptions1: {
@@ -194,28 +194,20 @@ export default {
         async getClouds(value) {
             console.log(value)
             this.cloud = await findCloudCover(value.lng, value.lat)
-            let chartData1 = [this.cloud[0], 8 - this.cloud[0]]
-            this.series1 = chartData1
-            let chartData2 = [this.cloud[1], 8 - this.cloud[1]]
-            this.series2 = chartData2
-            let chartData3 = [this.cloud[2], 8 - this.cloud[2]]
-            this.series3 = chartData3
-            let chartData4 = [this.cloud[3], 8 - this.cloud[3]]
-            this.series4 = chartData4
+            this.series1 = [this.cloud[0], 8 - this.cloud[0]]
+            this.series2 = [this.cloud[1], 8 - this.cloud[1]]
+            this.series3 = [this.cloud[2], 8 - this.cloud[2]]
+            this.series4 = [this.cloud[3], 8 - this.cloud[3]]
             this.getTime()
         },
     },
     async created() {
-        let data = await findCloudCover(11.89, 57.69)
-        console.log(data)
-        let chartData1 = [data[0], 8 - data[0]]
-        this.series1 = chartData1
-        let chartData2 = [data[1], 8 - data[1]]
-        this.series2 = chartData2
-        let chartData3 = [data[2], 8 - data[2]]
-        this.series3 = chartData3
-        let chartData4 = [data[3], 8 - data[3]]
-        this.series4 = chartData4
+        this.cloud = await findCloudCover(11.89, 57.69)
+        console.log(this.cloud)
+        this.series1 = [this.cloud[0], 8 - this.cloud[0]]
+        this.series2 = [this.cloud[1], 8 - this.cloud[1]]
+        this.series3 = [this.cloud[2], 8 - this.cloud[2]]
+        this.series4 = [this.cloud[3], 8 - this.cloud[3]]
         this.getTime()
     },
 }

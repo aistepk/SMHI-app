@@ -33,7 +33,6 @@ export default {
     components: { DropDownCities },
     data() {
         return {
-            rain: [],
             options: {
                 chart: {
                     id: "vuechart-example",
@@ -78,29 +77,19 @@ export default {
     },
 
     async created() {
+        this.series[0].data.length = 0
         this.rain = await findRain(11.89, 57.69)
         console.log(this.rain)
-        values.push(this.rain[0])
-        values.push(this.rain[1])
-        values.push(this.rain[2])
-        values.push(this.rain[3])
-        values.push(this.rain[4])
-        values.push(this.rain[5])
-        values.push(this.rain[6])
-        values.push(this.rain[7])
+        var i
+        for (i = 0; i <= this.rain.length; i++) {
+            values.push(this.rain[i])
+        }
     },
     methods: {
         async getRain(value) {
             this.series[0].data.length = 0
             this.rain = await findRain(value.lng, value.lat)
-            this.series[0].data.push(this.rain[0])
-            this.series[0].data.push(this.rain[1])
-            this.series[0].data.push(this.rain[2])
-            this.series[0].data.push(this.rain[3])
-            this.series[0].data.push(this.rain[4])
-            this.series[0].data.push(this.rain[5])
-            this.series[0].data.push(this.rain[6])
-            this.series[0].data.push(this.rain[7])
+            this.series = [{ data: this.rain }]
             console.log(this.series)
         },
     },
