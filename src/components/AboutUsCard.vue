@@ -5,25 +5,25 @@
             <div class="p-2">Vi är ett gäng surikater som gillar Java, UX och väder</div>
             <div class="p-2">Du kan nå oss på surikat@väder.se</div>
         </div>
-<div class="margins">
-        <div class="row row-cols-2">
-            <div class="card mt-3 box-shadow p-2 mb-4 zoom bg-transparent" v-for="(obj, key) in people" :key="key">
-                <div class="row">
-                    <div class="col">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ obj.name }}</h5>
-                            <p class="card-text">
-                                {{ obj.role }}
-                            </p>
+        <div class="margins">
+            <div class="row row-cols-2">
+                <div class="card mt-3 box-shadow p-2 mb-4 zoom bg-transparent" v-for="(obj, key) in people" :key="key">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ obj.name }}</h5>
+                                <p class="card-text">
+                                    {{ obj.role }}
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <img :src="obj.img" class="card-img-top" style="border-radius: 0px" />
+                        <div class="col">
+                            <img :src="obj.img" class="card-img-top" style="border-radius: 0px" />
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </template>
 

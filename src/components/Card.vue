@@ -1,26 +1,30 @@
 <template>
-<div>
     <div>
-        <img src="../assets/startsida.jpg" class="start-image" />
-    </div>
-    <div class="row">
-        <div class="card box-shadow p-2 mb-5 zoom card-image bg-transparent" v-for="(obj, key) in cardJson" :key="key">
-            <router-link :to="obj.path" class="txt">
-                <div class="card-body">
-                    <div class="d-flex justify-content-around">
-                        <div class="d-flex row">
-                            <h5 class="card-title">{{ obj.caption }}</h5>
-                            <p class="card-text">
-                                {{ obj.title }}
-                            </p>
+        <div>
+            <img src="../assets/startsida.jpg" class="start-image" />
+        </div>
+        <div class="row col-xs-6">
+            <div
+                class="card box-shadow p-2 mb-5 zoom card-image bg-transparent bla"
+                v-for="(obj, key) in cardJson"
+                :key="key"
+            >
+                <router-link :to="obj.path" class="txt">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div class="d-flex row">
+                                <h5 class="card-title">{{ obj.caption }}</h5>
+                                <p class="card-textt">
+                                    {{ obj.title }}
+                                </p>
+                            </div>
+                            <img :src="obj.img" class="image-img-top resp-img" />
                         </div>
-                        <img :src="obj.img" class="image-img-top" />
                     </div>
-                </div>
-            </router-link>
+                </router-link>
+            </div>
         </div>
     </div>
-</div>
 </template>
 
 <script>
@@ -65,12 +69,9 @@ export default {
     font-family: Montserrat;
 }
 .card-text {
-     font-family: "Open sans";
+    font-family: "Open sans";
     font-size: 16px;
 }
-
-
-
 
 .txt {
     text-decoration: none;
@@ -102,6 +103,24 @@ export default {
     padding: 15px;
 }
 .box-shadow {
-    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 768px) {
+    .bla {
+        height: 150px;
+        width: 650px;
+    }
+    .resp-img {
+        width: 160px;
+        height: auto;
+        margin-left: 100px;
+    }
+    p {
+        text-align: left;
+    }
+    h5 {
+        text-align: left;
+    }
 }
 </style>
