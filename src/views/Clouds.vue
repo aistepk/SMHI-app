@@ -1,9 +1,9 @@
 <template>
     <div>
-        <h4>Molnighet just nu</h4>
-        <h7 class="col-1">Välj Stad</h7>
-        <div class="row justify-content-left">
-            <drop-down-cities class="col-10" @update="getClouds" />
+        <h3>Molnighet just nu</h3>
+        <h6>Välj Stad</h6>
+        <div class="col-12">
+            <drop-down-cities @update="getClouds" />
         </div>
 
         <div class="wrapper">
@@ -213,9 +213,12 @@ export default {
 }
 </script>
 <style scoped>
-h4 {
+h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
     text-align: center;
     font-family: Montserrat;
+    font-weight: bold;
 }
 
 .hour-style {

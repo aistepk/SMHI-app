@@ -5,7 +5,7 @@
         </div>
         <div class="row col-xs-6">
             <div
-                class="card box-shadow p-2 mb-5 zoom card-image bg-transparent bla"
+                class="card box-shadow p-2 mb-4 zoom card-image bg-transparent spaces"
                 v-for="(obj, key) in cardJson"
                 :key="key"
             >
@@ -107,9 +107,9 @@ export default {
 }
 
 @media screen and (min-width: 768px) {
-    .bla {
+    .spaces {
         height: 150px;
-        width: 650px;
+        width: 700px;
     }
     .resp-img {
         width: 160px;

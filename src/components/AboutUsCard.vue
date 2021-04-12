@@ -1,9 +1,10 @@
 <template>
-    <div class="container">
-        <div class="d-flex align-items-center flex-column" style="height: 130px">
-            <div class="mb-auto p-2"><strong>Om oss</strong></div>
-            <div class="p-2">Vi är ett gäng surikater som gillar Java, UX och väder</div>
-            <div class="p-2">Du kan nå oss på surikat@väder.se</div>
+    <div class="container-fluid">
+        <div class="d-flex align-items-center flex-column" style="margin-top: 30px; margin-bottom: 10px">
+            <h2>Om Oss</h2>
+            <p>Vi är ett gäng surikater som gillar Java, UX och väder</p>
+            <p>Vår väderprognos app är baserat på data hämtat från SMHI Open Data API</p>
+            <p>Du kan nå oss på surikat@väder.se</p>
         </div>
         <div class="margins">
             <div class="row row-cols-2">
@@ -75,6 +76,10 @@ export default {
 </script>
 
 <style>
+h2 {
+    font-family: Montserrat;
+    font-weight: bold;
+}
 .card-title {
     font-size: 30px;
     font-family: Montserrat;
@@ -111,9 +116,12 @@ export default {
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 }
 
+.d-flex {
+    text-align: center;
+}
 @media screen and (min-width: 768px) {
     .margins {
-        margin-left: 310px;
+        margin-left: 408px;
         margin-right: 200px;
     }
 }
