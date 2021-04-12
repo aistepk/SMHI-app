@@ -5,13 +5,9 @@
             <div class="p-2">Vi är ett gäng surikater som gillar Java, UX och väder</div>
             <div class="p-2">Du kan nå oss på surikat@väder.se</div>
         </div>
-
+<div class="margins">
         <div class="row row-cols-2">
-            <div
-                class="card mt-3 box-shadow p-2 mb-4 zoom bg-transparent"
-                v-for="(obj, key) in people"
-                :key="key"
-            >
+            <div class="card mt-3 box-shadow p-2 mb-4 zoom bg-transparent" v-for="(obj, key) in people" :key="key">
                 <div class="row">
                     <div class="col">
                         <div class="card-body">
@@ -27,6 +23,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </template>
 
@@ -83,7 +80,7 @@ export default {
     font-family: Montserrat;
 }
 .card-text {
-     font-family: "Open sans";
+    font-family: "Open sans";
     font-size: 16px;
 }
 .center {
@@ -94,24 +91,30 @@ export default {
 
 .zoom {
     background-color: green;
-    transition: transform 0.3s; 
-    margin: 0 auto;
+    transition: transform 0.3s;
+    margin: 15px;
 }
 
 .zoom:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
 .card {
-    width: 20rem; 
-    overflow: hidden; 
+    width: 20rem;
+    overflow: hidden;
 }
 .card-img-top {
     width: 80%;
 }
 
 .box-shadow {
-    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 }
- 
+
+@media screen and (min-width: 768px) {
+    .margins {
+        margin-left: 310px;
+        margin-right: 200px;
+    }
+}
 </style>
