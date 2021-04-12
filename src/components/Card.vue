@@ -106,6 +106,13 @@ export default {
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 }
 
+p {
+    text-align: left;
+}
+
+h5 {
+    text-align: left;
+}
 @media screen and (min-width: 768px) {
     .spaces {
         height: 150px;
@@ -115,12 +122,6 @@ export default {
         width: 160px;
         height: auto;
         margin-left: 100px;
-    }
-    p {
-        text-align: left;
-    }
-    h5 {
-        text-align: left;
     }
 }
 </style>

@@ -15,8 +15,9 @@
                 </button>
 
                 <a class="navbar-brand" href="#"
-                    ><img src="../assets/meerk.svg" alt="meerk" width="200" height="130"
+                    ><img src="../assets/meerk.svg" alt="meerk" width="165" height="130"
                 /></a>
+                <!--   width="200" -->
                 <div v-if="weather > 0 && weather < 3">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
