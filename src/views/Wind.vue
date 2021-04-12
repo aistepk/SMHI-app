@@ -178,6 +178,10 @@ h3 {
     font-family: Montserrat;
     font-weight: bold;
 }
+
+h6 {
+    text-align: left;
+}
 @media screen and (min-width: 768px) {
     img {
         width: 100%;
