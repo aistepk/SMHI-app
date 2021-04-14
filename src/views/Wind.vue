@@ -5,8 +5,8 @@
     <div>
         <div class="d-flex flex-column mb-3">
             <h3>Vindstyrkan just nu</h3>
-            <h6>Välj Stad</h6>
-            <drop-down-cities @update="getWind" />
+            <h6 class="size">Välj Stad</h6>
+            <drop-down-cities class="size" @update="getWind" />
             <!--  <p class="desktop">{{ wind }}m/s</p>-->
             <p>{{ temperate }}</p>
         </div>
@@ -196,6 +196,10 @@ h6 {
         justify-content: flex-end;
         margin-top: 50px;
         margin-left: 70px;
+    }
+    .size {
+        width: 34%;
+        margin-left: 164px;
     }
 }
 </style>

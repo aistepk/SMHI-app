@@ -65,7 +65,7 @@ export default {
 
 <style scoped>
 .card-title {
-    font-size: 24px;
+    font-size: 22px;
     font-family: Montserrat;
 }
 .card-text {

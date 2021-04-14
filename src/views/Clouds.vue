@@ -1,9 +1,9 @@
 <template>
     <div>
         <h3>Molnighet just nu</h3>
-        <h6>Välj Stad</h6>
+        <h6 class="size">Välj Stad</h6>
         <div class="col-12">
-            <drop-down-cities @update="getClouds" />
+            <drop-down-cities class="size" @update="getClouds" />
         </div>
 
         <div class="wrapper">
@@ -291,6 +291,10 @@ h3 {
         justify-content: flex-start;
         margin-right: 200px;
         margin-top: 70px;
+    }
+    .size {
+        width: 40%;
+        margin-left: 164px;
     }
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
     <div>
         <h3>Nederbörd just nu</h3>
-        <h6>Välj Stad</h6>
-        <drop-down-cities @update="getRain" />
+        <h6 class="size">Välj Stad</h6>
+        <drop-down-cities class="size" @update="getRain" />
         <div class="mt-4 center">
             <apexchart
                 style="margin-top: 30px"
@@ -108,6 +108,10 @@ h3 {
 @media screen and (min-width: 576px) {
     .apex {
         width: 40%;
+    }
+        .size {
+        width: 40%;
+        margin: auto;
     }
 }
 
