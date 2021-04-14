@@ -35,7 +35,7 @@ export default {
             cardJson: [
                 {
                     img: require("../assets/kort-regn.jpg"),
-                    caption: "Regn",
+                    caption: "Nederbörd",
                     title: "Nederbörd de närmaste timmarna",
                     path: "/rain",
                 },
