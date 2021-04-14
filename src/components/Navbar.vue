@@ -236,11 +236,6 @@ export default {
     height: 26px;
 }
 
-.category-font {
-    font-weight: 600;
-    font-size: 1.1em;
-}
-
 #nav-col {
     background-color: #5ab4b4;
 }
@@ -260,6 +255,10 @@ export default {
 
     .test {
         margin-top: 15px;
+    }
+    .category-font {
+        font-weight: 600;
+        font-size: 1em;
     }
 }
 </style>
