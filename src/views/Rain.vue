@@ -1,7 +1,7 @@
 <template>
     <div>
-        <h4>Nederbörd just nu</h4>
-        <h4>Välj Stad</h4>
+        <h3>Nederbörd just nu</h3>
+        <h6>Välj Stad</h6>
         <drop-down-cities @update="getRain" />
         <div class="mt-4 center">
             <apexchart
@@ -58,7 +58,7 @@ export default {
 
                 stroke: {
                     curve: "smooth",
-                    width: 2,
+                    width: 5,
                 },
 
                 yaxis: {
@@ -97,9 +97,12 @@ export default {
 </script>
 
 <style scoped>
-h4 {
+h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
     text-align: center;
     font-family: Montserrat;
+    font-weight: bold;
 }
 
 @media screen and (min-width: 576px) {

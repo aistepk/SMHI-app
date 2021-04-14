@@ -4,7 +4,8 @@
     </div> -->
     <div>
         <div class="d-flex flex-column mb-3">
-            <h4>Vindstyrkan just nu</h4>
+            <h3>Vindstyrkan just nu</h3>
+            <h6>Välj Stad</h6>
             <drop-down-cities @update="getWind" />
             <!--  <p class="desktop">{{ wind }}m/s</p>-->
             <p>{{ temperate }}</p>
@@ -170,9 +171,16 @@ h5 {
     font-size: 16px;
 }
 
-h4 {
+h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
     text-align: center;
     font-family: Montserrat;
+    font-weight: bold;
+}
+
+h6 {
+    text-align: left;
 }
 @media screen and (min-width: 768px) {
     img {

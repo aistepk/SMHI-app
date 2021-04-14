@@ -15,7 +15,7 @@
                 </button>
 
                 <a class="navbar-brand" href="#"
-                    ><img src="../assets/meerk.svg" alt="meerk" width="175" height="125"
+                    ><img src="../assets/meerk.svg" alt="meerk" width="165" height="130"
                 /></a>
                 <div id="temp-desktop">
                     <div v-if="weather > 0 && weather < 3" class="test">
@@ -246,9 +246,8 @@ export default {
         right: 20px;
     }
 
-    .test{
+    .test {
         margin-top: 15px;
     }
-    
 }
 </style>
