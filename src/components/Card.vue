@@ -65,7 +65,7 @@ export default {
 
 <style scoped>
 .card-title {
-    font-size: 30px;
+    font-size: 24px;
     font-family: Montserrat;
 }
 .card-text {
@@ -122,6 +122,9 @@ h5 {
         width: 160px;
         height: auto;
         margin-left: 100px;
+    }
+    .card-title {
+        font-size: 30px;
     }
 }
 </style>
