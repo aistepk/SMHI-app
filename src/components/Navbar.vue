@@ -15,10 +15,10 @@
                 </button>
 
                 <a class="navbar-brand" href="#"
-                    ><img src="../assets/meerk.svg" alt="meerk" width="165" height="130"
+                    ><img src="../assets/meerk.svg" alt="meerk" width="160" height="130"
                 /></a>
                 <div id="temp-desktop">
-                    <div v-if="weather > 0 && weather < 3" class="test">
+                    <div v-if="weather > 0 && weather < 3" class="">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="25"
@@ -32,7 +32,7 @@
                             />
                         </svg>
                     </div>
-                    <div v-if="weather > 2 && weather < 5" class="test">
+                    <div v-if="weather > 2 && weather < 5" class="">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="25"
@@ -49,7 +49,7 @@
                             />
                         </svg>
                     </div>
-                    <div v-if="weather > 4 && weather < 8" class="test">
+                    <div v-if="weather > 4 && weather < 8" class="">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="25"
@@ -63,7 +63,7 @@
                             />
                         </svg>
                     </div>
-                    <div v-if="weather > 7 && weather < 28" class="test">
+                    <div v-if="weather > 7 && weather < 28" class="">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"
@@ -78,7 +78,9 @@
                         </svg>
                     </div>
 
-                    <div id="temp-icon" style="margin-left: 30px">{{ temp }} &deg;</div>
+                    <div id="temp-icon">
+                        <strong>{{ temp }}</strong> &deg;
+                    </div>
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
@@ -103,7 +105,7 @@
                                         />
                                     </svg>
                                 </div>
-                                Moln
+                                <div class="category-font">Moln</div>
                             </router-link>
                         </li>
                         <li class="nav-item">
@@ -126,7 +128,7 @@
                                         />
                                     </svg>
                                 </div>
-                                Regn
+                                <div class="category-font">Regn</div>
                             </router-link>
                         </li>
                         <li class="nav-item">
@@ -149,7 +151,7 @@
                                         />
                                     </svg>
                                 </div>
-                                Vind
+                                <div class="category-font">Vind</div>
                             </router-link>
                         </li>
                         <li class="nav-item">
@@ -172,11 +174,13 @@
                                         />
                                     </svg>
                                 </div>
-                                Om oss
+                                <div class="category-font">Om oss</div>
                             </router-link>
                         </li>
                     </ul>
-                    <p style="margin-right: 17px; margin-top: 15px"><strong>Välj Stad</strong></p>
+                    <p style="margin-right: 17px; margin-top: 15px" class="city-visibility">
+                        <strong>Välj Stad</strong>
+                    </p>
                     <div class="d-flex me-10" style="margin-right: 100px">
                         <drop-down-cities @update="getData" />
                     </div>
@@ -228,8 +232,13 @@ export default {
 }
 
 .svg-temp {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
+}
+
+.category-font {
+    font-weight: 600;
+    font-size: 1.1em;
 }
 
 #nav-col {
@@ -237,6 +246,9 @@ export default {
 }
 @media screen and (max-width: 576px) {
     .cities-select-container {
+        display: none;
+    }
+    .city-visibility {
         display: none;
     }
 }
