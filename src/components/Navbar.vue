@@ -18,7 +18,7 @@
                     ><img src="../assets/meerk.svg" alt="meerk" width="160" height="130"
                 /></a>
                 <div id="temp-desktop">
-                    <div v-if="weather > 0 && weather < 3" class="">
+                    <div v-if="weather > 0 && weather < 3" class="pos">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="25"
@@ -32,7 +32,7 @@
                             />
                         </svg>
                     </div>
-                    <div v-if="weather > 2 && weather < 5" class="">
+                    <div v-if="weather > 2 && weather < 5" class="pos">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="25"
@@ -49,7 +49,7 @@
                             />
                         </svg>
                     </div>
-                    <div v-if="weather > 4 && weather < 8" class="">
+                    <div v-if="weather > 4 && weather < 8" class="pos">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="25"
@@ -63,7 +63,7 @@
                             />
                         </svg>
                     </div>
-                    <div v-if="weather > 7 && weather < 28" class="">
+                    <div v-if="weather > 7 && weather < 28" class="pos">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"
@@ -193,7 +193,6 @@
 import DropDownCities from "./DropDownCities.vue"
 import findTemp from "../services/ForecastService.js"
 import findWS from "../services/WeatherService.js"
-
 export default {
     name: "Navbar",
     components: { DropDownCities },
@@ -223,19 +222,20 @@ export default {
     text-decoration: none;
     color: black;
 }
-
+#temp-icon {
+    margin-left: 35px;
+    margin-bottom: 40px;
+}
 #temp {
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 5px;
     margin-left: 5px;
 }
-
 .svg-temp {
     width: 26px;
     height: 26px;
 }
-
 #nav-col {
     background-color: #5ab4b4;
 }
@@ -251,14 +251,18 @@ export default {
     #temp-desktop {
         position: absolute;
         right: 20px;
+        font-size: 19px;
     }
-
     .test {
         margin-top: 15px;
     }
     .category-font {
         font-weight: 600;
-        font-size: 1em;
+        font-size: 1.1em;
+        margin-right: 7px;
+    }
+    .pos {
+        margin-top: 20px;
     }
 }
 </style>
